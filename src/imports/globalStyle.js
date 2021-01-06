@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
   body {
     color: ${color.dark};
