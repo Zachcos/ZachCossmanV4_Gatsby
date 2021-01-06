@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyle from '../imports/globalStyle';
 
 export default function Layout({ children }) {
+  useEffect(() => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, []);
+
   return (
     <>
       <Helmet>
