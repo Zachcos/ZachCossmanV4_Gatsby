@@ -14,3 +14,17 @@ export const font = {
   medium: 600,
   bold: 800,
 };
+
+const size = {
+  phone: '425px',
+  tablet: '768px',
+  desktop: '1366px',
+  LGdesktop: '1920px',
+};
+
+export const device = {
+  phone: `(max-width: ${size.phone})`,
+  tablet: `(max-width: ${size.tablet})`,
+  desktop: `(max-width: ${size.desktop})`,
+  LGdesktop: `(max-width: ${size.LGdesktop})`,
+};
