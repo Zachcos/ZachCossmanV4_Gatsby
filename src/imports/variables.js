@@ -11,4 +11,6 @@ export const font = {
   subheading: '1.333rem',
   subsubheading: '0.75rem',
   body: '1rem',
+  medium: 600,
+  bold: 800,
 };
