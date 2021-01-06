@@ -56,9 +56,6 @@ const CurrentBox = styled.div`
     font-size: ${font.subsubheading};
     font-weight: ${font.medium};
     margin-bottom: 15px;
-    position: absolute;
-    top: 15px;
-    left: 25px;
     opacity: 0.25;
   }
   .heading {
