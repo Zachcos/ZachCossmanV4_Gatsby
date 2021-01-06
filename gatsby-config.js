@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    'babel-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
