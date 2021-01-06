@@ -53,6 +53,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${color.dark};
     font-family: 'DIN', cursive;
     font-weight: 400;
+    visibility: hidden;
   }
   @font-face {
     font-family: "DIN";
