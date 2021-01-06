@@ -16,8 +16,9 @@ export const font = {
 };
 
 const size = {
-  phone: '425px',
-  tablet: '768px',
+  phone: '475px',
+  // tablet: '768px',
+  tablet: '1000px',
   desktop: '1366px',
   LGdesktop: '1920px',
 };
