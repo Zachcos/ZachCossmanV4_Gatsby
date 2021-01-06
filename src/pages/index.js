@@ -180,12 +180,16 @@ export default function Home() {
         delay: -0.8,
         stagger: 0.4,
         ease: 'expo.inOut',
+      })
+      .to('#intro-overlay', {
+        duration: 0,
+        css: { display: 'none' },
       });
   }, []);
 
   return (
     <>
-      <IntroOverlay>
+      <IntroOverlay id="intro-overlay">
         <div className="top">
           <div className="overlay-top" />
           <div className="overlay-top" />
