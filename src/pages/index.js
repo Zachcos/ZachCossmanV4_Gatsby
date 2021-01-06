@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { color, font } from '../imports/variables';
 
 import headshot from '../../static/assets/headshot.jpg';
+import video from '../../static/assets/video.mp4';
 
 const GridWrapper = styled.div`
   display: grid;
@@ -75,6 +76,14 @@ const CurrentBox = styled.div`
 const FeatureBox = styled.div`
   background: darkmagenta;
   grid-area: feature;
+  position: relative;
+  video {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    top: 0;
+    width: 100%;
+  }
 `;
 
 const NavBox = styled.div`
@@ -111,7 +120,9 @@ export default function Home() {
           Stay tuned for more information about the show
         </p>
       </CurrentBox>
-      <FeatureBox />
+      <FeatureBox>
+        <video src={video} autoPlay loop muted playsInline />
+      </FeatureBox>
       <NavBox>
         <span>Resume</span>
         <span>Media</span>
