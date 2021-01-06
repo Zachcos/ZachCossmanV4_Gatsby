@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
 import { color, font } from '../imports/variables';
 
 import headshot from '../../static/assets/headshot.jpg';
@@ -24,10 +25,15 @@ const NameBox = styled.div`
   display: flex;
   grid-area: name;
   justify-content: center;
-  h1 {
-    font-size: ${font.display};
-    font-weight: ${font.bold};
-    text-transform: uppercase;
+  .container {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    h1 {
+      font-size: ${font.display};
+      font-weight: ${font.bold};
+      text-transform: uppercase;
+    }
   }
 `;
 
@@ -101,33 +107,124 @@ const NavBox = styled.div`
   }
 `;
 
+const IntroOverlay = styled.div`
+  .top {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+    .overlay-top {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: ${color.light};
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &:nth-child(2) {
+        left: 33.333vw;
+      }
+      &:nth-child(3) {
+        left: 66.666vw;
+      }
+    }
+  }
+  .bottom {
+    bottom: 0;
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+    .overlay-bottom {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: ${color.light};
+      bottom: 0;
+      right: 66.666vw;
+      &:nth-child(2) {
+        right: 33.333vw;
+      }
+      &:nth-child(3) {
+        right: 0;
+      }
+    }
+  }
+`;
+
 export default function Home() {
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    // prevent flashing
+    gsap.to('body', { duration: 0, css: { visibility: 'visible' } });
+
+    tl.from('.container h1', {
+      duration: 1.8,
+      delay: 1,
+      ease: 'power4.out',
+      y: 120,
+      skewY: 7,
+    })
+      .to('.overlay-top', {
+        duration: 1.6,
+        stagger: 0.4,
+        ease: 'expo.inOut',
+        height: 0,
+      })
+      .to('.overlay-bottom', {
+        width: 0,
+        duration: 1.6,
+        delay: -0.8,
+        stagger: 0.4,
+        ease: 'expo.inOut',
+      });
+  }, []);
+
   return (
-    <GridWrapper>
-      <NameBox>
-        <h1>Zach Cossman</h1>
-      </NameBox>
-      <AboutBox />
-      <CurrentBox>
-        <h5 className="date">Wed, Jan 6th</h5>
-        <h2 className="heading">Ren McCormack</h2>
-        <h3 className="subheading">Footloose w/ NCL</h3>
-        <p className="body">
-          Zach is currently in rehearsals to play Ren McCormack aboard the
-          Norwegian Joy.
-          <br />
-          <br />
-          Stay tuned for more information about the show
-        </p>
-      </CurrentBox>
-      <FeatureBox>
-        <video src={video} autoPlay loop muted playsInline />
-      </FeatureBox>
-      <NavBox>
-        <span>Resume</span>
-        <span>Media</span>
-        <span>Contact</span>
-      </NavBox>
-    </GridWrapper>
+    <>
+      <IntroOverlay>
+        <div className="top">
+          <div className="overlay-top" />
+          <div className="overlay-top" />
+          <div className="overlay-top" />
+        </div>
+        <div className="bottom">
+          <div className="overlay-bottom" />
+          <div className="overlay-bottom" />
+          <div className="overlay-bottom" />
+        </div>
+      </IntroOverlay>
+      <GridWrapper>
+        <NameBox>
+          <div className="container">
+            <h1>Zach Cossman</h1>
+          </div>
+        </NameBox>
+        <AboutBox />
+        <CurrentBox>
+          <h5 className="date">Wed, Jan 6th</h5>
+          <h2 className="heading">Ren McCormack</h2>
+          <h3 className="subheading">Footloose w/ NCL</h3>
+          <p className="body">
+            Zach is currently in rehearsals to play Ren McCormack aboard the
+            Norwegian Joy.
+            <br />
+            <br />
+            Stay tuned for more information about the show
+          </p>
+        </CurrentBox>
+        <FeatureBox>
+          <video src={video} autoPlay loop muted playsInline />
+        </FeatureBox>
+        <NavBox>
+          <span>Resume</span>
+          <span>Media</span>
+          <span>Contact</span>
+        </NavBox>
+      </GridWrapper>
+    </>
   );
 }
