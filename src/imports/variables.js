@@ -1,6 +1,6 @@
 export const color = {
   dark: '#222834',
-  mid: '#38596b',
+  med: '#38596b',
   light: '#9eb0bb',
   accent: '#52514e',
 };
