@@ -16,10 +16,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <GlobalStyle />
-      <div>
-        <h1>This is our layout component</h1>
-        {children}
-      </div>
+      {children}
     </>
   );
 }
