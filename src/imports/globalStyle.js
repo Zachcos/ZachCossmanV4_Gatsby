@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { color } from './variables';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -49,23 +50,24 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
   }
   body {
-    font-family: 'FF DIN', sans-serif;
+    color: ${color.dark};
+    font-family: 'DIN', cursive;
     font-weight: 400;
   }
   @font-face {
-    font-family: "FF DIN";
+    font-family: "DIN";
     font-weight: 400;
-    src: url('../../static/fonts/FF DIN Regular.otf');
+    src: url('../fonts/FF DIN Regular.otf');
   }
   @font-face {
-    font-family: "FF DIN";
+    font-family: "DIN";
     font-weight: 600;
-    src: url('../../static/fonts/FF DIN Medium.otf');
+    src: url('../fonts/FF DIN Medium.otf');
   }
   @font-face {
-    font-family: "FF DIN";
+    font-family: "DIN";
     font-weight: 800;
-    src: url('../../static/fonts/FF DIN Bold.otf');
+    src: url('../fonts/FF DIN Bold.otf');
   }
 `;
 
