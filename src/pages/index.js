@@ -8,38 +8,11 @@ import IntroOverlay from '../components/introOverlay';
 import HeroText from '../components/heroText';
 import AboutBox from '../components/aboutBox';
 import CurrentBox from '../components/currentBox';
+import FeatureBox from '../components/featureBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-
-const FeatureBox = styled.div`
-  align-items: center;
-  display: flex;
-  grid-area: feature;
-  justify-content: center;
-  position: relative;
-  &:hover {
-    i {
-      opacity: 1;
-    }
-  }
-  i {
-    color: ${color.light};
-    cursor: pointer;
-    opacity: 0.3;
-    position: absolute;
-    transition: opacity 0.2s ease-out;
-  }
-  video {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    object-position: right;
-    top: 0;
-    width: 100%;
-  }
-`;
 
 const NavBox = styled.div`
   background: ${color.accent};
@@ -95,10 +68,7 @@ export default function Home() {
       <HeroText />
       <AboutBox image={headshot} overlayText="About me." />
       <CurrentBox />
-      <FeatureBox>
-        <i className="far fa-6x fa-play-circle" />
-        <video src={video} autoPlay loop muted playsInline />
-      </FeatureBox>
+      <FeatureBox video={video} />
       <NavBox>
         <span>Resume</span>
         <span>Media</span>
