@@ -24,6 +24,16 @@ const GridWrapper = styled.div`
       'current about'
       'feature nav';
   }
+  @media ${device.phone} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 50vh);
+    grid-template-areas:
+      'name'
+      'about'
+      'current'
+      'feature'
+      'nav';
+  }
 `;
 
 const NameBox = styled.div`
@@ -40,29 +50,31 @@ const NameBox = styled.div`
       font-size: ${font.display};
       font-weight: ${font.bold};
       text-transform: uppercase;
+      @media ${device.phone} {
+        font-size: 3rem;
+      }
+      @media ${device.SMphone} {
+        font-size: 2.4rem;
+      }
     }
-  }
-  @media ${device.phone} {
-    background: lightcoral;
   }
 `;
 
 const AboutBox = styled.div`
   grid-area: about;
-  height: 50vw;
+  height: 40vw;
   height: calc(var(--vh, 1vh) * 50);
   width: 33.333vw;
   img {
-    height: 100%;
     object-fit: cover;
     object-position: top;
     width: 100%;
   }
   @media ${device.tablet} {
     width: 50vw;
-    img {
-      margin-top: 0;
-    }
+  }
+  @media ${device.phone} {
+    width: 100vw;
   }
 `;
 
@@ -162,6 +174,14 @@ const IntroOverlay = styled.div`
         }
       }
     }
+    @media ${device.phone} {
+      .overlay-top {
+        width: 100vw;
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
   }
   .bottom {
     bottom: 0;
@@ -192,6 +212,15 @@ const IntroOverlay = styled.div`
           right: 0;
         }
         &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+    @media ${device.phone} {
+      .overlay-bottom {
+        right: 0;
+        width: 100vw;
+        &:nth-child(2) {
           display: none;
         }
       }
