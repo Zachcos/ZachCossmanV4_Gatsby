@@ -6,10 +6,10 @@ export const color = {
 };
 
 export const font = {
-  display: '5.61rem',
-  heading: '2.369rem',
-  subheading: '1.333rem',
-  subsubheading: '0.75rem',
+  display: '4.768rem',
+  heading: '1.953rem',
+  subheading: '1.25rem',
+  subsubheading: '0.8rem',
   body: '1rem',
   medium: 600,
   bold: 800,
