@@ -7,6 +7,7 @@ const Overlay = styled.div`
     height: 50vh;
     height: calc(var(--vh, 1vh) * 50);
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: 8;
     .overlay-top {
@@ -67,6 +68,7 @@ const Overlay = styled.div`
     }
     @media ${device.tablet} {
       .overlay-bottom {
+        bottom: 50vh;
         right: 50vw;
         width: 50vw;
         &:nth-child(2) {
@@ -79,6 +81,7 @@ const Overlay = styled.div`
     }
     @media ${device.phone} {
       .overlay-bottom {
+        bottom: 150vh;
         right: 0;
         width: 100vw;
         &:nth-child(2) {
