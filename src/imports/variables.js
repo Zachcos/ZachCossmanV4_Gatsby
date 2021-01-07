@@ -16,14 +16,15 @@ export const font = {
 };
 
 const size = {
+  SMphone: '425px',
   phone: '600px',
-  // tablet: '768px',
   tablet: '1000px',
   desktop: '1366px',
   LGdesktop: '1920px',
 };
 
 export const device = {
+  SMphone: `(max-width: ${size.SMphone})`,
   phone: `(max-width: ${size.phone})`,
   tablet: `(max-width: ${size.tablet})`,
   desktop: `(max-width: ${size.desktop})`,
