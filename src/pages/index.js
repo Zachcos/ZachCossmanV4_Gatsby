@@ -4,36 +4,12 @@ import gsap from 'gsap';
 import { color, font, device } from '../imports/variables';
 
 // Components
-import GridWrapper from '../components/gridWrapper';
 import IntroOverlay from '../components/introOverlay';
+import HeroName from '../components/heroText';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-
-const NameBox = styled.div`
-  align-items: center;
-  background: ${color.med};
-  display: flex;
-  grid-area: name;
-  justify-content: center;
-  .container {
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
-    h1 {
-      font-size: ${font.display};
-      font-weight: ${font.bold};
-      text-transform: uppercase;
-      @media ${device.phone} {
-        font-size: 3rem;
-      }
-      @media ${device.SMphone} {
-        font-size: 2.4rem;
-      }
-    }
-  }
-`;
 
 const AboutBox = styled.div`
   grid-area: about;
@@ -174,11 +150,7 @@ export default function Home() {
   return (
     <>
       <IntroOverlay />
-      <NameBox>
-        <div className="container">
-          <h1>Zach Cossman</h1>
-        </div>
-      </NameBox>
+      <HeroName />
       <AboutBox>
         <div className="hover-overlay">
           <h2>About me.</h2>
