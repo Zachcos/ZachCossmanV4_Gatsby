@@ -2,62 +2,14 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import { color, font, device } from '../imports/variables';
+
+// Components
+import GridWrapper from '../components/gridWrapper';
 import IntroOverlay from '../components/introOverlay';
 
+// Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-
-const GridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    'name name about'
-    'current feature nav';
-  min-height: 100vh;
-  height: 100%;
-  min-width: 100%;
-  @media ${device.tablet} {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50vh 50vh 50vh;
-    grid-template-areas:
-      'name name'
-      'current about'
-      'feature nav';
-  }
-  @media ${device.phone} {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 50vh);
-    grid-template-areas:
-      'name'
-      'about'
-      'current'
-      'feature'
-      'nav';
-  }
-  .hover-overlay {
-    align-items: center;
-    background: ${color.dark};
-    bottom: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: all 0.2s ease-out;
-    width: 100%;
-    height: 100%;
-    h2 {
-      color: ${color.light};
-      font-size: ${font.heading};
-      font-weight: ${font.bold};
-      text-transform: uppercase;
-    }
-  }
-`;
 
 const NameBox = styled.div`
   align-items: center;
@@ -222,40 +174,38 @@ export default function Home() {
   return (
     <>
       <IntroOverlay />
-      <GridWrapper>
-        <NameBox>
-          <div className="container">
-            <h1>Zach Cossman</h1>
-          </div>
-        </NameBox>
-        <AboutBox>
-          <div className="hover-overlay">
-            <h2>About me.</h2>
-          </div>
-          <img src={headshot} alt="" />
-        </AboutBox>
-        <CurrentBox>
-          <h5 className="date">Wed, Jan 6th</h5>
-          <h2 className="heading">Ren McCormack</h2>
-          <h3 className="subheading">Footloose w/ NCL</h3>
-          <p className="body">
-            Zach is currently in rehearsals to play Ren McCormack aboard the
-            Norwegian Joy.
-            <br />
-            <br />
-            Stay tuned for more information about the show
-          </p>
-        </CurrentBox>
-        <FeatureBox>
-          <i className="far fa-6x fa-play-circle" />
-          <video src={video} autoPlay loop muted playsInline />
-        </FeatureBox>
-        <NavBox>
-          <span>Resume</span>
-          <span>Media</span>
-          <span>Contact</span>
-        </NavBox>
-      </GridWrapper>
+      <NameBox>
+        <div className="container">
+          <h1>Zach Cossman</h1>
+        </div>
+      </NameBox>
+      <AboutBox>
+        <div className="hover-overlay">
+          <h2>About me.</h2>
+        </div>
+        <img src={headshot} alt="" />
+      </AboutBox>
+      <CurrentBox>
+        <h5 className="date">Wed, Jan 6th</h5>
+        <h2 className="heading">Ren McCormack</h2>
+        <h3 className="subheading">Footloose w/ NCL</h3>
+        <p className="body">
+          Zach is currently in rehearsals to play Ren McCormack aboard the
+          Norwegian Joy.
+          <br />
+          <br />
+          Stay tuned for more information about the show
+        </p>
+      </CurrentBox>
+      <FeatureBox>
+        <i className="far fa-6x fa-play-circle" />
+        <video src={video} autoPlay loop muted playsInline />
+      </FeatureBox>
+      <NavBox>
+        <span>Resume</span>
+        <span>Media</span>
+        <span>Contact</span>
+      </NavBox>
     </>
   );
 }
