@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
-import { color, font } from '../imports/variables';
+import { color, font, device } from '../imports/variables';
 
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
@@ -14,9 +14,16 @@ const GridWrapper = styled.div`
     'name name about'
     'current feature nav';
   min-height: 100vh;
+  height: 100%;
   min-width: 100%;
-
-  overflow: hidden;
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 50vh 50vh;
+    grid-template-areas:
+      'name name'
+      'current about'
+      'feature nav';
+  }
 `;
 
 const NameBox = styled.div`
@@ -35,13 +42,28 @@ const NameBox = styled.div`
       text-transform: uppercase;
     }
   }
+  @media ${device.phone} {
+    background: lightcoral;
+  }
 `;
 
 const AboutBox = styled.div`
-  background: url(${headshot}) no-repeat;
-  background-position-y: calc(-2vw - 10px);
-  background-size: cover;
   grid-area: about;
+  height: 50vw;
+  height: calc(var(--vh, 1vh) * 50);
+  width: 33.333vw;
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+  }
+  @media ${device.tablet} {
+    width: 50vw;
+    img {
+      margin-top: 0;
+    }
+  }
 `;
 
 const CurrentBox = styled.div`
@@ -129,6 +151,17 @@ const IntroOverlay = styled.div`
         left: 66.666vw;
       }
     }
+    @media ${device.tablet} {
+      .overlay-top {
+        width: 50vw;
+        &:nth-child(2) {
+          left: 50vw;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
   }
   .bottom {
     bottom: 0;
@@ -149,6 +182,18 @@ const IntroOverlay = styled.div`
       }
       &:nth-child(3) {
         right: 0;
+      }
+    }
+    @media ${device.tablet} {
+      .overlay-bottom {
+        right: 50vw;
+        width: 50vw;
+        &:nth-child(2) {
+          right: 0;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
       }
     }
   }
@@ -207,7 +252,9 @@ export default function Home() {
             <h1>Zach Cossman</h1>
           </div>
         </NameBox>
-        <AboutBox />
+        <AboutBox>
+          <img src={headshot} alt="" />
+        </AboutBox>
         <CurrentBox>
           <h5 className="date">Wed, Jan 6th</h5>
           <h2 className="heading">Ren McCormack</h2>
