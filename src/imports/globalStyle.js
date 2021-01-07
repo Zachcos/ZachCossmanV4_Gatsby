@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { color } from './variables';
+import { color, device } from './variables';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -48,6 +48,9 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-size: 16px;
+    @media ${device.tablet} {
+      font-size: 14px;
+    }
   }
   body {
     color: ${color.dark};
