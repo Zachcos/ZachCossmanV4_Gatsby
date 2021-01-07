@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 import gsap from 'gsap';
-import { color, font } from '../imports/variables';
 
 // Components
 import IntroOverlay from '../components/introOverlay';
@@ -9,25 +7,11 @@ import HeroText from '../components/heroText';
 import AboutBox from '../components/aboutBox';
 import CurrentBox from '../components/currentBox';
 import FeatureBox from '../components/featureBox';
+import NavBox from '../components/navBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-
-const NavBox = styled.div`
-  background: ${color.accent};
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  grid-area: nav;
-  padding: 45px 55px;
-  span {
-    font-size: ${font.heading};
-    font-weight: ${font.bold};
-    text-transform: uppercase;
-  }
-`;
 
 export default function Home() {
   useEffect(() => {
@@ -69,11 +53,7 @@ export default function Home() {
       <AboutBox image={headshot} overlayText="About me." />
       <CurrentBox />
       <FeatureBox video={video} />
-      <NavBox>
-        <span>Resume</span>
-        <span>Media</span>
-        <span>Contact</span>
-      </NavBox>
+      <NavBox />
     </>
   );
 }
