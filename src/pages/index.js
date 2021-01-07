@@ -5,12 +5,12 @@ import { color, font } from '../imports/variables';
 
 // Components
 import IntroOverlay from '../components/introOverlay';
-import HeroName from '../components/heroText';
+import HeroText from '../components/heroText';
+import AboutBox from '../components/aboutBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-import AboutBox from '../components/aboutBox';
 
 const CurrentBox = styled.div`
   background: ${color.light};
@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <>
       <IntroOverlay />
-      <HeroName />
+      <HeroText />
       <AboutBox image={headshot} overlayText="About me." />
       <CurrentBox>
         <h5 className="date">Wed, Jan 6th</h5>
