@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import { color, font, device } from '../imports/variables';
-import IntroOverlay from '../components/IntroOverlay';
+import IntroOverlay from '../components/introOverlay';
 
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
