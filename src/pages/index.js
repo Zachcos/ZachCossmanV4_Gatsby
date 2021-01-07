@@ -121,6 +121,7 @@ const FeatureBox = styled.div`
     height: 100%;
     left: 0;
     object-fit: cover;
+    object-position: right;
     top: 0;
     width: 100%;
   }
