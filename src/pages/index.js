@@ -7,45 +7,11 @@ import { color, font } from '../imports/variables';
 import IntroOverlay from '../components/introOverlay';
 import HeroText from '../components/heroText';
 import AboutBox from '../components/aboutBox';
+import CurrentBox from '../components/currentBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-
-const CurrentBox = styled.div`
-  background: ${color.light};
-  box-sizing: border-box;
-  grid-area: current;
-  padding: 45px 25px 0;
-  position: relative;
-  .date,
-  .heading,
-  .subheading {
-    text-transform: uppercase;
-  }
-  .heading,
-  .subheading {
-    font-weight: ${font.bold};
-  }
-  .date {
-    font-size: ${font.subsubheading};
-    font-weight: ${font.medium};
-    margin-bottom: 15px;
-    opacity: 0.25;
-  }
-  .heading {
-    font-size: ${font.heading};
-    margin-bottom: 5px;
-  }
-  .subheading {
-    font-size: ${font.subheading};
-    margin-bottom: 40px;
-    opacity: 0.8;
-  }
-  .body {
-    line-height: 1.4rem;
-  }
-`;
 
 const FeatureBox = styled.div`
   align-items: center;
@@ -128,18 +94,7 @@ export default function Home() {
       <IntroOverlay />
       <HeroText />
       <AboutBox image={headshot} overlayText="About me." />
-      <CurrentBox>
-        <h5 className="date">Wed, Jan 6th</h5>
-        <h2 className="heading">Ren McCormack</h2>
-        <h3 className="subheading">Footloose w/ NCL</h3>
-        <p className="body">
-          Zach is currently in rehearsals to play Ren McCormack aboard the
-          Norwegian Joy.
-          <br />
-          <br />
-          Stay tuned for more information about the show
-        </p>
-      </CurrentBox>
+      <CurrentBox />
       <FeatureBox>
         <i className="far fa-6x fa-play-circle" />
         <video src={video} autoPlay loop muted playsInline />
