@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyle from '../imports/globalStyle';
+import GridWrapper from './gridWrapper';
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <GlobalStyle />
-      {children}
+      <GridWrapper>{children}</GridWrapper>
     </>
   );
 }
