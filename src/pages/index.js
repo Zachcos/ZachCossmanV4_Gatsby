@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
-import { color, font, device } from '../imports/variables';
+import { color, font } from '../imports/variables';
 
 // Components
 import IntroOverlay from '../components/introOverlay';
@@ -10,31 +10,7 @@ import HeroName from '../components/heroText';
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
-
-const AboutBox = styled.div`
-  grid-area: about;
-  height: 40vw;
-  height: calc(var(--vh, 1vh) * 50);
-  overflow: hidden;
-  position: relative;
-  width: 33.333vw;
-  &:hover {
-    .hover-overlay {
-      opacity: 0.8;
-    }
-  }
-  img {
-    object-fit: cover;
-    object-position: top;
-    width: 100%;
-  }
-  @media ${device.tablet} {
-    width: 50vw;
-  }
-  @media ${device.phone} {
-    width: 100vw;
-  }
-`;
+import AboutBox from '../components/aboutBox';
 
 const CurrentBox = styled.div`
   background: ${color.light};
@@ -151,12 +127,7 @@ export default function Home() {
     <>
       <IntroOverlay />
       <HeroName />
-      <AboutBox>
-        <div className="hover-overlay">
-          <h2>About me.</h2>
-        </div>
-        <img src={headshot} alt="" />
-      </AboutBox>
+      <AboutBox image={headshot} overlayText="About me." />
       <CurrentBox>
         <h5 className="date">Wed, Jan 6th</h5>
         <h2 className="heading">Ren McCormack</h2>
