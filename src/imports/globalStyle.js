@@ -47,9 +47,9 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   html {
-    font-size: 16px;
+    font-size: 18px;
     @media ${device.tablet} {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   body {
