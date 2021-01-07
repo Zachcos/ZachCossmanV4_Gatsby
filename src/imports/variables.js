@@ -16,7 +16,7 @@ export const font = {
 };
 
 const size = {
-  phone: '475px',
+  phone: '600px',
   // tablet: '768px',
   tablet: '1000px',
   desktop: '1366px',
