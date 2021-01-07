@@ -34,6 +34,28 @@ const GridWrapper = styled.div`
       'feature'
       'nav';
   }
+  .hover-overlay {
+    align-items: center;
+    background: ${color.dark};
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.2s ease-out;
+    width: 100%;
+    height: 100%;
+    h2 {
+      color: ${color.light};
+      font-size: ${font.heading};
+      font-weight: ${font.bold};
+      text-transform: uppercase;
+    }
+  }
 `;
 
 const NameBox = styled.div`
@@ -64,7 +86,14 @@ const AboutBox = styled.div`
   grid-area: about;
   height: 40vw;
   height: calc(var(--vh, 1vh) * 50);
+  overflow: hidden;
+  position: relative;
   width: 33.333vw;
+  &:hover {
+    .hover-overlay {
+      opacity: 0.8;
+    }
+  }
   img {
     object-fit: cover;
     object-position: top;
@@ -114,9 +143,23 @@ const CurrentBox = styled.div`
 `;
 
 const FeatureBox = styled.div`
-  background: darkmagenta;
+  align-items: center;
+  display: flex;
   grid-area: feature;
+  justify-content: center;
   position: relative;
+  &:hover {
+    i {
+      opacity: 1;
+    }
+  }
+  i {
+    color: ${color.light};
+    cursor: pointer;
+    opacity: 0.3;
+    position: absolute;
+    transition: opacity 0.2s ease-out;
+  }
   video {
     height: 100%;
     left: 0;
@@ -283,6 +326,9 @@ export default function Home() {
           </div>
         </NameBox>
         <AboutBox>
+          <div className="hover-overlay">
+            <h2>About me.</h2>
+          </div>
           <img src={headshot} alt="" />
         </AboutBox>
         <CurrentBox>
@@ -298,6 +344,7 @@ export default function Home() {
           </p>
         </CurrentBox>
         <FeatureBox>
+          <i className="far fa-6x fa-play-circle" />
           <video src={video} autoPlay loop muted playsInline />
         </FeatureBox>
         <NavBox>
