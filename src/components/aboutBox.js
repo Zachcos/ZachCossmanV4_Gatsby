@@ -4,20 +4,17 @@ import { device } from '../imports/variables';
 
 const Wrapper = styled.div`
   grid-area: about;
-  height: 40vw;
-  height: calc(var(--vh, 1vh) * 50);
   overflow: hidden;
   position: relative;
   width: 33.333vw;
-  &:hover {
-    .hover-overlay {
-      opacity: 0.8;
-    }
-  }
   img {
     object-fit: cover;
     object-position: top;
     width: 100%;
+  }
+  @media screen and (min-width: 1000px) {
+    height: 50vw;
+    height: calc(var(--vh, 1vh) * 50);
   }
   @media ${device.tablet} {
     width: 50vw;
@@ -27,12 +24,9 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function AboutBox({ image, overlayText }) {
+export default function AboutBox({ image }) {
   return (
     <Wrapper>
-      <div className="hover-overlay">
-        <h2>{overlayText}</h2>
-      </div>
       <img src={image} alt="" />
     </Wrapper>
   );
