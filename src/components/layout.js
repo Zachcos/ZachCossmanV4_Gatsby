@@ -39,6 +39,14 @@ export default function Layout({ children }) {
       .to('#intro-overlay', {
         duration: 0,
         css: { display: 'none' },
+      })
+      .to('#nav-wrap', {
+        duration: 0,
+        css: { zIndex: 100 },
+      })
+      .to('#nav-btn', {
+        duration: 0,
+        css: { zIndex: 200 },
       });
   }, []);
 
@@ -57,7 +65,7 @@ export default function Layout({ children }) {
       <GlobalStyle />
       <GridWrapper>
         <NavBtn />
-        {/* <IntroOverlay /> */}
+        <IntroOverlay />
         {children}
       </GridWrapper>
     </>
