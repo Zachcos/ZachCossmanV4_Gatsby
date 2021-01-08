@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <HeroText />
-      <AboutBox image={headshot} overlayText="About me." />
+      <AboutBox image={headshot} />
       <CurrentBox />
       <FeatureBox video={video} />
       <NavBox />
