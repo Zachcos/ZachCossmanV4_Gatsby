@@ -8,7 +8,6 @@ import { color, font, device } from '../imports/variables';
 const Wrapper = styled(motion.div)`
   align-items: center;
   background: ${color.dark};
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +20,7 @@ const Wrapper = styled(motion.div)`
 
 const NavIcon = styled(motion.div)`
   align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 70px;
@@ -92,7 +92,7 @@ export default function NavBtn() {
             <span />
           </motion.div>
         </NavIcon>
-        {isOpen && <Menu />}
+        <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
       </Wrapper>
     </AnimateSharedLayout>
   );
@@ -100,18 +100,16 @@ export default function NavBtn() {
 
 function Menu() {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <FullWrap
-        layout
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.2, delay: 0.2 } }}
-        exit={{ opacity: 0, transition: { duration: 0.2 } }}
-      >
-        <div className="link">about</div>
-        <div className="link">resume</div>
-        <div className="link">media</div>
-        <div className="link">contact</div>
-      </FullWrap>
-    </AnimatePresence>
+    <FullWrap
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.2 } }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+    >
+      <div className="link">about</div>
+      <div className="link">resume</div>
+      <div className="link">media</div>
+      <div className="link">contact</div>
+    </FullWrap>
   );
 }
