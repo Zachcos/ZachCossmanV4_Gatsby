@@ -36,12 +36,25 @@ const NavIcon = styled(motion.div)`
       border-radius: 10px;
       display: block;
       height: 3px;
+      position: relative;
+      transition: all 0.2s ease-out;
       width: 30px;
       &:first-child {
         margin-bottom: 8px;
       }
       &:last-child {
         width: 23px;
+      }
+      &.open {
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 1px;
+          width: 17px;
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          width: 17px;
+        }
       }
     }
   }
@@ -88,8 +101,8 @@ export default function Nav() {
       <NavWrapper layout id="nav-wrap">
         <NavIcon id="nav-btn" onClick={() => setIsOpen(!isOpen)}>
           <motion.div layout className="line-wrapper">
-            <span />
-            <span />
+            <span className={isOpen ? 'open' : ''} />
+            <span className={isOpen ? 'open' : ''} />
           </motion.div>
         </NavIcon>
         <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
