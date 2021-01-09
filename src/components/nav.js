@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import { color, font, device } from '../imports/variables';
 
@@ -119,7 +120,12 @@ function Menu() {
       animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
-      <div className="link">about</div>
+      <div className="link">
+        <Link to="/">home</Link>
+      </div>
+      <div className="link">
+        <Link to="/about">about</Link>
+      </div>
       <div className="link">resume</div>
       <div className="link">media</div>
       <div className="link">contact</div>
