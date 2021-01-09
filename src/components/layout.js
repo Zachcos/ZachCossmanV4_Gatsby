@@ -64,8 +64,8 @@ export default function Layout({ children }) {
       </Helmet>
       <GlobalStyle />
       <GridWrapper>
-        <Nav />
         <IntroOverlay />
+        <Nav />
         {children}
       </GridWrapper>
     </>
