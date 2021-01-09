@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import GlobalStyle from '../imports/globalStyle';
 import GridWrapper from './gridWrapper';
 import IntroOverlay from './introOverlay';
-import NavBtn from './navBtn';
+import Nav from './nav';
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Layout({ children }) {
       </Helmet>
       <GlobalStyle />
       <GridWrapper>
-        <NavBtn />
+        <Nav />
         <IntroOverlay />
         {children}
       </GridWrapper>

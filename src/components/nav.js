@@ -73,7 +73,7 @@ const LinksWrapper = styled(motion.div)`
   }
 `;
 
-export default function NavBtn() {
+export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
