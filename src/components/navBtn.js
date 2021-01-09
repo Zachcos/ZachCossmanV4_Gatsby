@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import { color, font, device } from '../imports/variables';
 
-const Wrapper = styled(motion.div)`
+const NavWrapper = styled(motion.div)`
   align-items: center;
   background: ${color.dark};
   display: flex;
@@ -47,7 +47,7 @@ const NavIcon = styled(motion.div)`
   }
 `;
 
-const FullWrap = styled(motion.div)`
+const LinksWrapper = styled(motion.div)`
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -85,7 +85,7 @@ export default function NavBtn() {
   }, [isOpen]);
   return (
     <AnimateSharedLayout>
-      <Wrapper layout id="nav-wrap">
+      <NavWrapper layout id="nav-wrap">
         <NavIcon id="nav-btn" onClick={() => setIsOpen(!isOpen)}>
           <motion.div layout className="line-wrapper">
             <span />
@@ -93,14 +93,14 @@ export default function NavBtn() {
           </motion.div>
         </NavIcon>
         <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
-      </Wrapper>
+      </NavWrapper>
     </AnimateSharedLayout>
   );
 }
 
 function Menu() {
   return (
-    <FullWrap
+    <LinksWrapper
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.2 } }}
@@ -110,6 +110,6 @@ function Menu() {
       <div className="link">resume</div>
       <div className="link">media</div>
       <div className="link">contact</div>
-    </FullWrap>
+    </LinksWrapper>
   );
 }
