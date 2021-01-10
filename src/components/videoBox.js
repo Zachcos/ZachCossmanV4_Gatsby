@@ -21,10 +21,8 @@ const Wrapper = styled.div`
   }
   video {
     height: 100%;
-    left: 0;
     object-fit: cover;
     object-position: right;
-    top: 0;
     width: 100%;
   }
 `;
