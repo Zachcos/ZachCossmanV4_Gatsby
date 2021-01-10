@@ -5,11 +5,12 @@ import HeroText from '../components/heroText';
 import PhotoBox from '../components/photoBox';
 import TextBox from '../components/textBox';
 import VideoBox from '../components/videoBox';
-import NavBox from '../components/navBox';
+import ColorBox from '../components/colorBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/video.mp4';
+import { color } from '../imports/variables';
 
 export default function Home() {
   const gig = {
@@ -32,7 +33,7 @@ export default function Home() {
         </p>
       </TextBox>
       <VideoBox video={video} area="four" />
-      <NavBox area="five" />
+      <ColorBox area="five" bgColor={color.accent} />
     </>
   );
 }
