@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { color, font } from '../imports/variables';
 
 const Wrapper = styled.div`
-  background: ${color.light};
   box-sizing: border-box;
   padding: 45px 25px 0;
   position: relative;
@@ -41,11 +40,39 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function TextBox({ content, area, children }) {
+export default function TextBox({ content, area, children, theme }) {
   const { heading, subheading, date } = content;
+  let style = '';
+
+  switch (theme) {
+    case 'dark':
+      style = {
+        background: `${color.dark}`,
+        color: `${color.light}`,
+      };
+      break;
+    case 'medium':
+      style = {
+        background: `${color.med}`,
+        color: `${color.dark}`,
+      };
+      break;
+    case 'accent':
+      style = {
+        background: `${color.accent}`,
+        color: `${color.dark}`,
+      };
+      break;
+    default:
+      style = {
+        background: `${color.light}`,
+        color: `${color.dark}`,
+      };
+      break;
+  }
 
   return (
-    <Wrapper style={{ gridArea: area }}>
+    <Wrapper style={{ gridArea: area, ...style }}>
       <h5 className="date">{date}</h5>
       <h2 className="heading">{heading}</h2>
       <h3 className="subheading">{subheading}</h3>

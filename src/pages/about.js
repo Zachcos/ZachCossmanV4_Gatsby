@@ -71,7 +71,7 @@ export default function About() {
           </p>
         </div>
       </Wrapper>
-      <TextBox area="four" content={details}>
+      <TextBox area="four" content={details} theme="dark">
         <p className="body">
           <span className="emphasis">Favorite food:</span> Pad Thai
         </p>
