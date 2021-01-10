@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Children } from 'react';
+
 import styled from 'styled-components';
 import { color, font } from '../imports/variables';
 
@@ -36,19 +37,22 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function CurrentBox({ area }) {
+export default function TextBox({ content, area, children }) {
+  const { heading, subheading, date, body } = content;
+
   return (
     <Wrapper style={{ gridArea: area }}>
-      <h5 className="date">Wed, Jan 6th</h5>
-      <h2 className="heading">Ren McCormack</h2>
-      <h3 className="subheading">Footloose w/ NCL</h3>
-      <p className="body">
+      <h5 className="date">{date}</h5>
+      <h2 className="heading">{heading}</h2>
+      <h3 className="subheading">{subheading}</h3>
+      {/* <p className="body">
         Zach is currently in rehearsals to play Ren McCormack aboard the
         Norwegian Joy.
         <br />
         <br />
         Stay tuned for more information about the show
-      </p>
+      </p> */}
+      {children}
     </Wrapper>
   );
 }
