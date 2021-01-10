@@ -34,6 +34,10 @@ const Wrapper = styled.div`
   }
   .body {
     line-height: 1.4rem;
+    margin-bottom: 10px;
+    .emphasis {
+      font-weight: ${font.medium};
+    }
   }
 `;
 
