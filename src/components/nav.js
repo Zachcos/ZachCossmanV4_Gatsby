@@ -72,6 +72,9 @@ const LinksWrapper = styled(motion.div)`
   position: relative;
   width: 66.666vw;
   z-index: 11;
+
+  /* width: 100vw; */
+  /* height: 100vh; */
   .link {
     color: ${color.light};
     text-transform: uppercase;
@@ -106,13 +109,15 @@ export default function Nav() {
             <span className={isOpen ? 'open' : ''} />
           </motion.div>
         </NavIcon>
-        <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
+        <AnimatePresence>
+          {isOpen && <Menu setIsOpen={setIsOpen} />}
+        </AnimatePresence>
       </NavWrapper>
     </AnimateSharedLayout>
   );
 }
 
-function Menu() {
+function Menu({ setIsOpen }) {
   return (
     <LinksWrapper
       layout
@@ -121,10 +126,14 @@ function Menu() {
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
       <div className="link">
-        <Link to="/">home</Link>
+        <Link to="/" onClick={() => setIsOpen(false)}>
+          home
+        </Link>
       </div>
       <div className="link">
-        <Link to="/about">about</Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}>
+          about
+        </Link>
       </div>
       <div className="link">resume</div>
       <div className="link">media</div>
