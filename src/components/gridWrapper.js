@@ -7,19 +7,20 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'one one two'
-    'three four five';
+    'one one four'
+    'two three five';
   min-height: 100vh;
   height: 100%;
   min-width: 100%;
   position: relative;
   @media ${device.tablet} {
     grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 50vh 50vh 50vh; */
     grid-template-rows: 50vh 50vh 50vh;
     grid-template-areas:
       'one one'
       'two three'
-      'four five';
+      'five four';
   }
   @media ${device.phone} {
     grid-template-columns: 1fr;
