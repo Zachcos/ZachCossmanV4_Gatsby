@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function AboutBox({ image, area }) {
+export default function PhotoBox({ image, area }) {
   return (
     <Wrapper style={{ gridArea: area }}>
       <img src={image} alt="" />
