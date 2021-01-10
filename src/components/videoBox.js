@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function FeatureBox({ video, area }) {
+export default function VideoBox({ video, area }) {
   return (
     <Wrapper style={{ gridArea: area }}>
       <i className="far fa-6x fa-play-circle" />

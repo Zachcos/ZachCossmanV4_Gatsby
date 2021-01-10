@@ -4,7 +4,7 @@ import React from 'react';
 import HeroText from '../components/heroText';
 import PhotoBox from '../components/photoBox';
 import CurrentBox from '../components/currentBox';
-import FeatureBox from '../components/featureBox';
+import VideoBox from '../components/videoBox';
 import NavBox from '../components/navBox';
 
 // Assets
@@ -17,7 +17,7 @@ export default function Home() {
       <HeroText area="one " />
       <PhotoBox image={headshot} area="two" />
       <CurrentBox area="three" />
-      <FeatureBox video={video} area="four" />
+      <VideoBox video={video} area="four" />
       <NavBox area="five" />
     </>
   );
