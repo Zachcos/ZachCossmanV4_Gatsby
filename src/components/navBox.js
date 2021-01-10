@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-area: nav;
+  grid-area: five;
   padding: 45px 55px;
   span {
     font-size: ${font.heading};

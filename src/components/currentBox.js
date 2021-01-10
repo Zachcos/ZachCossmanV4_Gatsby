@@ -5,7 +5,7 @@ import { color, font } from '../imports/variables';
 const Wrapper = styled.div`
   background: ${color.light};
   box-sizing: border-box;
-  grid-area: current;
+  grid-area: three;
   padding: 45px 25px 0;
   position: relative;
   .date,

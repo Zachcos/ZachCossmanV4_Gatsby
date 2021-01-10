@@ -5,7 +5,7 @@ import { color } from '../imports/variables';
 const Wrapper = styled.div`
   align-items: center;
   display: flex;
-  grid-area: feature;
+  grid-area: four;
   justify-content: center;
   position: relative;
   &:hover {

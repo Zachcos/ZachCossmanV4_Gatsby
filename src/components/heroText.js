@@ -6,7 +6,7 @@ const NameBox = styled.div`
   align-items: center;
   background: ${color.med};
   display: flex;
-  grid-area: name;
+  grid-area: one;
   justify-content: center;
   .container {
     overflow: hidden;

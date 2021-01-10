@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { device } from '../imports/variables';
 
 const Wrapper = styled.div`
-  grid-area: about;
+  grid-area: two;
   overflow: hidden;
   position: relative;
   width: 33.333vw;

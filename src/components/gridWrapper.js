@@ -7,8 +7,8 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'name name about'
-    'current feature nav';
+    'one one two'
+    'three four five';
   min-height: 100vh;
   height: 100%;
   min-width: 100%;
@@ -17,19 +17,19 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50vh 50vh 50vh;
     grid-template-areas:
-      'name name'
-      'current about'
-      'feature nav';
+      'one one'
+      'two three'
+      'four five';
   }
   @media ${device.phone} {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 50vh);
     grid-template-areas:
-      'name'
-      'about'
-      'current'
-      'feature'
-      'nav';
+      'one'
+      'two'
+      'three'
+      'four'
+      'five';
   }
   .hover-overlay {
     align-items: center;
