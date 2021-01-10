@@ -5,7 +5,6 @@ import { color, font } from '../imports/variables';
 const Wrapper = styled.div`
   background: ${color.light};
   box-sizing: border-box;
-  grid-area: three;
   padding: 45px 25px 0;
   position: relative;
   .date,
@@ -37,9 +36,9 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function CurrentBox() {
+export default function CurrentBox({ area }) {
   return (
-    <Wrapper>
+    <Wrapper style={{ gridArea: area }}>
       <h5 className="date">Wed, Jan 6th</h5>
       <h2 className="heading">Ren McCormack</h2>
       <h3 className="subheading">Footloose w/ NCL</h3>

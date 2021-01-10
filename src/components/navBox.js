@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-area: five;
   padding: 45px 55px;
   span {
     font-size: ${font.heading};
@@ -17,9 +16,9 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function NavBox() {
+export default function NavBox({ area }) {
   return (
-    <Wrapper>
+    <Wrapper style={{ gridArea: area }}>
       <span>Resume</span>
       <span>Media</span>
       <span>Contact</span>

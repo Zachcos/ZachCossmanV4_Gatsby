@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { device } from '../imports/variables';
 
 const Wrapper = styled.div`
-  grid-area: two;
   overflow: hidden;
   position: relative;
   width: 33.333vw;
@@ -24,9 +23,9 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function AboutBox({ image }) {
+export default function AboutBox({ image, area }) {
   return (
-    <Wrapper>
+    <Wrapper style={{ gridArea: area }}>
       <img src={image} alt="" />
     </Wrapper>
   );

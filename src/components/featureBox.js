@@ -5,7 +5,6 @@ import { color } from '../imports/variables';
 const Wrapper = styled.div`
   align-items: center;
   display: flex;
-  grid-area: four;
   justify-content: center;
   position: relative;
   &:hover {
@@ -30,9 +29,9 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function FeatureBox({ video }) {
+export default function FeatureBox({ video, area }) {
   return (
-    <Wrapper>
+    <Wrapper style={{ gridArea: area }}>
       <i className="far fa-6x fa-play-circle" />
       <video src={video} autoPlay loop muted playsInline />
     </Wrapper>

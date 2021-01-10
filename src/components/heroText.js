@@ -6,7 +6,6 @@ const NameBox = styled.div`
   align-items: center;
   background: ${color.med};
   display: flex;
-  grid-area: one;
   justify-content: center;
   .container {
     overflow: hidden;
@@ -26,9 +25,9 @@ const NameBox = styled.div`
   }
 `;
 
-export default function HeroText() {
+export default function HeroText({ area }) {
   return (
-    <NameBox>
+    <NameBox style={{ gridArea: area }}>
       <div className="container">
         <h1>Zach Cossman</h1>
       </div>

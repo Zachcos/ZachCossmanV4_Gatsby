@@ -14,11 +14,11 @@ import video from '../../static/assets/video.mp4';
 export default function Home() {
   return (
     <>
-      <HeroText />
-      <AboutBox image={headshot} />
-      <CurrentBox />
-      <FeatureBox video={video} />
-      <NavBox />
+      <HeroText area="one " />
+      <AboutBox image={headshot} area="two" />
+      <CurrentBox area="three" />
+      <FeatureBox video={video} area="four" />
+      <NavBox area="five" />
     </>
   );
 }
