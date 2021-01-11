@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function TextBox({ area, theme }) {
+export default function DownloadBox({ area, theme }) {
   let style = '';
 
   switch (theme) {
