@@ -1,7 +1,8 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import { color, font } from '../imports/variables';
+
+import resume from '../../static/assets/ZachCossman.pdf';
 
 const Wrapper = styled.div`
   box-sizing: border-box;
