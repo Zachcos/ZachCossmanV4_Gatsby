@@ -38,7 +38,7 @@ export default function About() {
   const details = {
     heading: '',
     subheading: 'random facts',
-    date: '',
+    subnote: '',
   };
 
   return (

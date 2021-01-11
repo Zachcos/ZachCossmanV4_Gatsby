@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   padding: 45px 25px 0;
   position: relative;
-  .date,
+  .subnote,
   .heading,
   .subheading {
     text-transform: uppercase;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   .subheading {
     font-weight: ${font.bold};
   }
-  .date {
+  .subnote {
     font-size: ${font.subsubheading};
     font-weight: ${font.medium};
     margin-bottom: 15px;
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 `;
 
 export default function TextBox({ content, area, children, theme }) {
-  const { heading, subheading, date } = content;
+  const { heading, subheading, subnote } = content;
   let style = '';
 
   switch (theme) {
@@ -73,7 +73,7 @@ export default function TextBox({ content, area, children, theme }) {
 
   return (
     <Wrapper style={{ gridArea: area, ...style }}>
-      <h5 className="date">{date}</h5>
+      <h5 className="subnote">{subnote}</h5>
       <h2 className="heading">{heading}</h2>
       <h3 className="subheading">{subheading}</h3>
       {children}

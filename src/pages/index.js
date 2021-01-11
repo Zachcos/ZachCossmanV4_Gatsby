@@ -5,7 +5,7 @@ import HeroText from '../components/heroText';
 import PhotoBox from '../components/photoBox';
 import TextBox from '../components/textBox';
 import VideoBox from '../components/videoBox';
-import ColorBox from '../components/colorBox';
+import ResumeBox from '../components/resumeBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
@@ -16,7 +16,7 @@ export default function Home() {
   const gig = {
     heading: 'Ren McCormack',
     subheading: 'Footloose w/ NCL',
-    date: 'Wed, Jan 6th',
+    subnote: 'Wed, Jan 6th',
   };
 
   return (
@@ -33,7 +33,7 @@ export default function Home() {
         </p>
       </TextBox>
       <VideoBox video={video} area="four" />
-      <ColorBox area="five" bgColor={color.accent} />
+      <ResumeBox area="five" theme="dark" />
     </>
   );
 }
