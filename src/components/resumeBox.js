@@ -32,9 +32,25 @@ const Wrapper = styled.div`
     margin-bottom: 40px;
     opacity: 0.8;
   }
-  .body {
+  a {
+    outline: none;
+    text-decoration: none;
+    &:hover {
+      .download {
+        color: ${color.med};
+      }
+    }
+  }
+  .download {
+    align-items: center;
+    color: ${color.light};
+    display: flex;
     line-height: 1.4rem;
     margin-bottom: 10px;
+    transition: color 0.15s ease-out;
+    i {
+      margin-right: 15px;
+    }
     .emphasis {
       font-weight: ${font.medium};
     }
@@ -73,10 +89,15 @@ export default function TextBox({ area, theme }) {
 
   return (
     <Wrapper style={{ gridArea: area, ...style }}>
-      <h5 className="subnote">something here</h5>
+      <h5 className="subnote">&nbsp;</h5>
       <h2 className="heading">Download</h2>
       <h3 className="subheading">headshot/resume</h3>
-      <p>this will be the download link</p>
+      <a href={resume} target="_blank" rel="noreferrer">
+        <div className="download">
+          <i className="fas fa-2x fa-file-download" />
+          Zach Cossman Resume
+        </div>
+      </a>
     </Wrapper>
   );
 }
