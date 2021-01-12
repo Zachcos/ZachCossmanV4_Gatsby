@@ -9,7 +9,7 @@ import DownloadBox from '../components/downloadBox';
 
 // Assets
 import headshot from '../../static/assets/headshot.jpg';
-import video from '../../static/assets/video.mp4';
+import video from '../../static/assets/ncl_thumbnail.mp4';
 
 export default function Home() {
   const gig = {

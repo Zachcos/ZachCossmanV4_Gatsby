@@ -10,7 +10,7 @@ import '../css/lightgallery.css';
 import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
 
-import video from '../../static/assets/video.mp4';
+import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Wrapper = styled.div`
   align-items: center;
