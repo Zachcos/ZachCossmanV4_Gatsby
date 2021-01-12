@@ -22,6 +22,8 @@
     "gatsby-plugin-react-helmet": "^3.8.0",
     "gatsby-plugin-styled-components": "^3.8.0",
     "gsap": "^3.5.1",
+    "lg-video": "^1.4.0",
+    "lightgallery": "^1.10.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
