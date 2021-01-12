@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import { color, device } from './variables';
 
+import DINreg from '../fonts/FF DIN Regular.otf';
+import DINmed from '../fonts/FF DIN Medium.otf';
+import DINbold from '../fonts/FF DIN Bold.otf';
+
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -61,17 +65,17 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "DIN";
     font-weight: 400;
-    src: url('../fonts/FF DIN Regular.otf');
+    src: url(${DINreg});
   }
   @font-face {
     font-family: "DIN";
     font-weight: 600;
-    src: url('../fonts/FF DIN Medium.otf');
+    src: url(${DINmed});
   }
   @font-face {
     font-family: "DIN";
     font-weight: 800;
-    src: url('../fonts/FF DIN Bold.otf');
+    src: url(${DINbold});
   }
 `;
 
