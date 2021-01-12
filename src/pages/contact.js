@@ -26,21 +26,21 @@ export default function Contact() {
       <HeroText text="get in touch" area="one" />
       <TextBox area="two" content={agentDetails} theme="light">
         <a
-          href="mailto: zachcos@gmail.com"
+          href="https://annsteeleagency.com"
           target="_blank"
           rel="noreferrer"
           style={{ color: `${color.dark}` }}
         >
           <div className="img-container">
             <img src={ASALogo} alt="" />
-            <span className="asa emphasis">Contact ASA</span>
+            <span className="asa emphasis">Visit ASA.com</span>
           </div>
         </a>
       </TextBox>
       <DownloadBox area="three" theme="dark" />
       <TextBox area="four" content={designDetails} theme="accent">
         <a
-          href="mailto: zachcos@gmail.com"
+          href="https://zachcossmandesigns.com"
           target="_blank"
           rel="noreferrer"
           style={{ color: `${color.dark}` }}

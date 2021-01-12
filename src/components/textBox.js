@@ -41,6 +41,7 @@ const Wrapper = styled.div`
     font-weight: ${font.medium};
   }
   a {
+    outline: none;
     text-decoration: none;
     &:hover {
       .img-container {
