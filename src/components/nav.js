@@ -76,8 +76,16 @@ const LinksWrapper = styled(motion.div)`
   /* width: 100vw; */
   /* height: 100vh; */
   .link {
-    color: ${color.light};
+    font-weight: ${font.medium};
     text-transform: uppercase;
+    a {
+      color: ${color.light};
+      text-decoration: none;
+      transition: color 0.15s ease-out;
+      &:hover {
+        color: ${color.med};
+      }
+    }
   }
   @media ${device.tablet} {
     flex-direction: column;
