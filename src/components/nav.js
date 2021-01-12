@@ -135,7 +135,6 @@ function Menu({ setIsOpen }) {
           about
         </Link>
       </div>
-      <div className="link">resume</div>
       <div className="link">media</div>
       <div className="link">contact</div>
     </LinksWrapper>
