@@ -26,6 +26,7 @@
     "gatsby-source-filesystem": "^2.9.0",
     "gatsby-transformer-sharp": "^2.10.0",
     "gsap": "^3.5.1",
+    "jquery": "^3.5.1",
     "lg-video": "^1.4.0",
     "lightgallery": "^1.10.0",
     "react": "^16.12.0",
