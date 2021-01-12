@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Georgia on my Mind",
+    "artist": "Ray Charles",
+    "videoUrl": "https://youtu.be/L_dQycqw-aA",
+    "findMe": "georgiaOnMyMind"
+  },
+  {
+    "title": "Feathered Indians",
+    "artist": "Tyler Childers",
+    "videoUrl": "https://youtu.be/_XK7NsJIB-s",
+    "findMe": "featheredIndians"
+  },
+  {
+    "title": "Where Rainbows Never Die",
+    "artist": "The Steeldrivers",
+    "videoUrl": "https://youtu.be/lUA--zWVwZ4",
+    "findMe": "whereRainbowsNeverDie"
+  },
+  {
+    "title": "If You Were the Rain",
+    "artist": "Stephen Day",
+    "videoUrl": "https://youtu.be/zsMcn5ukpok",
+    "findMe": "ifYouWereTheRain"
+  }
+]
