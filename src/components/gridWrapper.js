@@ -15,7 +15,6 @@ const Wrapper = styled.div`
   position: relative;
   @media ${device.tablet} {
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 50vh 50vh 50vh; */
     grid-template-rows: 50vh 50vh 50vh;
     grid-template-areas:
       'one one'
