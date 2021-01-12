@@ -5,7 +5,7 @@ import { color, font } from '../imports/variables';
 
 const Wrapper = styled.div`
   box-sizing: border-box;
-  padding: 45px 25px 0;
+  padding: 60px 25px 0;
   position: relative;
   .subnote,
   .heading,
@@ -20,7 +20,9 @@ const Wrapper = styled.div`
     font-size: ${font.subsubheading};
     font-weight: ${font.medium};
     margin-bottom: 15px;
-    opacity: 0.25;
+    opacity: 0.3;
+    position: absolute;
+    top: 40px;
   }
   .heading {
     font-size: ${font.heading};
@@ -34,8 +36,34 @@ const Wrapper = styled.div`
   .body {
     line-height: 1.4rem;
     margin-bottom: 10px;
-    .emphasis {
-      font-weight: ${font.medium};
+  }
+  .emphasis {
+    font-weight: ${font.medium};
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      .img-container {
+        .zcd {
+          color: #ffcc00;
+        }
+        .asa {
+          color: #c47d7b;
+        }
+      }
+    }
+    .img-container {
+      align-items: center;
+      display: flex;
+      img {
+        height: 150px;
+        margin-right: 20px;
+        width: 150px;
+      }
+      .zcd,
+      .asa {
+        transition: color 0.15s ease-out;
+      }
     }
   }
 `;

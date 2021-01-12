@@ -6,7 +6,7 @@ import resume from '../../static/assets/ZachCossman.pdf';
 
 const Wrapper = styled.div`
   box-sizing: border-box;
-  padding: 45px 25px 0;
+  padding: 60px 25px 0;
   position: relative;
   .subnote,
   .heading,
@@ -22,6 +22,8 @@ const Wrapper = styled.div`
     font-weight: ${font.medium};
     margin-bottom: 15px;
     opacity: 0.25;
+    position: absolute;
+    top: 43px;
   }
   .heading {
     font-size: ${font.heading};
@@ -89,7 +91,6 @@ export default function DownloadBox({ area, theme }) {
 
   return (
     <Wrapper style={{ gridArea: area, ...style }}>
-      <h5 className="subnote">&nbsp;</h5>
       <h2 className="heading">Download</h2>
       <h3 className="subheading">headshot/resume</h3>
       <a href={resume} target="_blank" rel="noreferrer">
