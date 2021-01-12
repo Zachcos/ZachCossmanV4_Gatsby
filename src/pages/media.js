@@ -52,12 +52,6 @@ export default function Media({ data }) {
     $(node).lightGallery();
   }
 
-  const details = {
-    heading: 'Placeholder',
-    subheading: 'something goes here',
-    subnote: '',
-  };
-
   return (
     <>
       <Wrapper>
