@@ -7,8 +7,8 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    'one one four'
-    'two three five';
+    'one one five'
+    'two three four';
   min-height: 100vh;
   height: 100%;
   min-width: 100%;
