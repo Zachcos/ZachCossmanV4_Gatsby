@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { color, device, font } from '../imports/variables';
 import PhotoBox from '../components/photoBox';
-import TextBox from '../components/textBox';
+import DownloadBox from '../components/downloadBox';
 
 import headshot from '../../static/assets/headshot2.jpg';
 
@@ -71,20 +71,7 @@ export default function About() {
           </p>
         </div>
       </Wrapper>
-      <TextBox area="four" content={details} theme="dark">
-        <p className="body">
-          <span className="emphasis">Favorite food:</span> Pad Thai
-        </p>
-        <p className="body">
-          <span className="emphasis">Favorite animal:</span> Giraffe
-        </p>
-        <p className="body">
-          <span className="emphasis">Blood type:</span> Iced Vanilla Latte
-        </p>
-        <p className="body">
-          <span className="emphasis">Dream occupation @ 5:</span> Fire truck
-        </p>
-      </TextBox>
+      <DownloadBox area="four" theme="dark" />
       <PhotoBox image={headshot} area="five" />
     </>
   );
