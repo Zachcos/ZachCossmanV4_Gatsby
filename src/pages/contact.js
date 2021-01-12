@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { color } from '../imports/variables';
 import HeroText from '../components/heroText';
 import TextBox from '../components/textBox';
@@ -24,7 +23,7 @@ export default function Contact() {
 
   return (
     <>
-      <HeroText area="one" />
+      <HeroText text="get in touch" area="one" />
       <TextBox area="two" content={agentDetails} theme="light">
         <a
           href="mailto: zachcos@gmail.com"

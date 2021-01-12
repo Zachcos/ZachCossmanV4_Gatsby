@@ -25,11 +25,11 @@ const NameBox = styled.div`
   }
 `;
 
-export default function HeroText({ area }) {
+export default function HeroText({ area, text }) {
   return (
     <NameBox style={{ gridArea: area }}>
       <div className="container">
-        <h1>Zach Cossman</h1>
+        <h1>{text}</h1>
       </div>
     </NameBox>
   );

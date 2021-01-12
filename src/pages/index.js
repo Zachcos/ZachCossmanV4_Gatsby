@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <HeroText area="one" />
+      <HeroText text="Zach Cossman" area="one" />
       <PhotoBox image={headshot} area="two" />
       <TextBox area="three" content={gig}>
         <p className="body">
