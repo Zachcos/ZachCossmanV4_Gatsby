@@ -136,7 +136,11 @@ function Menu({ setIsOpen }) {
         </Link>
       </div>
       <div className="link">media</div>
-      <div className="link">contact</div>
+      <div className="link">
+        <Link to="/contact" onClick={() => setIsOpen(false)}>
+          contact
+        </Link>
+      </div>
     </LinksWrapper>
   );
 }
