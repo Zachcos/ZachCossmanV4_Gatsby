@@ -8,7 +8,9 @@ import 'lightgallery';
 import 'lg-video';
 import '../css/lightgallery.css';
 import DownloadBox from '../components/downloadBox';
-import TextBox from '../components/textBox';
+import VideoBox from '../components/videoBox';
+
+import video from '../../static/assets/video.mp4';
 
 const Wrapper = styled.div`
   align-items: center;
@@ -88,7 +90,7 @@ export default function Media({ data }) {
           })}
         </div>
       </Wrapper>
-      <TextBox area="four" theme="medium" content={details} />
+      <VideoBox video={video} area="four" />
       <DownloadBox area="five" theme="dark" />
     </>
   );
