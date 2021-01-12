@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import gsap from 'gsap';
 import GlobalStyle from '../imports/globalStyle';
 import GridWrapper from './gridWrapper';
-import IntroOverlay from './introOverlay';
+// import IntroOverlay from './introOverlay';
 import Nav from './nav';
 
 export default function Layout({ children }) {
