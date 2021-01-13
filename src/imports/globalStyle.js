@@ -1,9 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { color, device } from './variables';
 
-import DINreg from '../fonts/FF DIN Regular.otf';
-import DINmed from '../fonts/FF DIN Medium.otf';
-import DINbold from '../fonts/FF DIN Bold.otf';
+import { DINreg, DINmed, DINbold } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
