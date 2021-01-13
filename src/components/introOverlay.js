@@ -26,6 +26,7 @@ const Overlay = styled.div`
       }
     }
     @media ${device.tablet} {
+      height: 50vh;
       .overlay-top {
         width: 50vw;
         &:nth-child(2) {
@@ -48,7 +49,7 @@ const Overlay = styled.div`
   .bottom {
     bottom: 0;
     height: 50vh;
-    /* height: calc(var(--vh, 1vh) * 51); */
+    height: calc(var(--vh, 1vh) * 50);
     position: absolute;
     width: 100%;
     z-index: 8;
@@ -67,6 +68,7 @@ const Overlay = styled.div`
       }
     }
     @media ${device.tablet} {
+      height: 50vh;
       .overlay-bottom {
         bottom: 50vh;
         right: 50vw;
