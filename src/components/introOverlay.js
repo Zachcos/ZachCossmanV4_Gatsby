@@ -5,7 +5,7 @@ import { color, device } from '../imports/variables';
 const Overlay = styled.div`
   .top {
     height: 50vh;
-    height: calc(var(--vh, 1vh) * 51);
+    height: calc(var(--vh, 1vh) * 50);
     position: absolute;
     top: 0;
     width: 100%;
