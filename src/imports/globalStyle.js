@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     color: ${color.dark};
-    font-family: "DIN", cursive;
+    font-family: "DIN", sans-serif;
     font-weight: 400;
     visibility: hidden;
   }
