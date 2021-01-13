@@ -1,7 +1,6 @@
+/* eslint-disable import/no-named-as-default-member */
 import { createGlobalStyle } from 'styled-components';
 import { color, device } from './variables';
-
-import { DINreg, DINmed, DINbold } from './fonts';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -56,24 +55,34 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     color: ${color.dark};
-    font-family: 'DIN', cursive;
+    font-family: "DIN", cursive;
     font-weight: 400;
     visibility: hidden;
   }
+
   @font-face {
-    font-family: "DIN";
+    font-family: 'DIN';
     font-weight: 400;
-    src: url(${DINreg});
+    src: url('/fonts/DIN-Regular.eot'),
+         url('/fonts/DIN-Regular.woff2') format('woff2'),
+         url('/fonts/DIN-Regular.woff') format('woff'),
+         url('/fonts/DIN-Regular.ttf') format('truetype');
   }
   @font-face {
-    font-family: "DIN";
+    font-family: 'DIN';
     font-weight: 600;
-    src: url(${DINmed});
+    src: url('/fonts/DIN-Medium.eot'),
+         url('/fonts/DIN-Medium.woff2') format('woff2'),
+         url('/fonts/DIN-Medium.woff') format('woff'),
+         url('/fonts/DIN-Medium.ttf') format('truetype');
   }
   @font-face {
-    font-family: "DIN";
+    font-family: 'DIN';
     font-weight: 800;
-    src: url(${DINbold});
+    src: url('/fonts/DIN-Bold.eot'),
+         url('/fonts/DIN-Bold.woff2') format('woff2'),
+         url('/fonts/DIN-Bold.woff') format('woff'),
+         url('/fonts/DIN-Bold.ttf') format('truetype');
   }
 `;
 
