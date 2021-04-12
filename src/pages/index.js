@@ -13,9 +13,9 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 export default function Home() {
   const gig = {
-    heading: 'Ren McCormack',
-    subheading: 'Footloose w/ NCL',
-    subnote: 'Wed, Jan 6th',
+    heading: 'Project upcoming',
+    subheading: '',
+    subnote: 'Mon, Apr 12th',
   };
 
   return (
@@ -24,11 +24,8 @@ export default function Home() {
       <PhotoBox image={headshot} area="two" />
       <TextBox area="three" content={gig}>
         <p className="body">
-          Zach is currently in rehearsals to play Ren McCormack aboard the
-          Norwegian Joy.
           <br />
-          <br />
-          Stay tuned for more information about the show
+          Zach's next gig will be announced shortly.
         </p>
       </TextBox>
       <VideoBox video={video} area="four" />
