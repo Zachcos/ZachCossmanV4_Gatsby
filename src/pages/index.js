@@ -13,9 +13,9 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 export default function Home() {
   const gig = {
-    heading: 'Project upcoming',
-    subheading: '',
-    subnote: 'Mon, Apr 12th',
+    heading: 'Kinky Boots',
+    subheading: 'Norwegian Cruise Lines',
+    subnote: 'Mon, July 26th',
   };
 
   return (
@@ -25,7 +25,8 @@ export default function Home() {
       <TextBox area="three" content={gig}>
         <p className="body">
           <br />
-          Zach's next gig will be announced shortly.
+          Zach is currently playing Charlie in Kinky Boots on the Norwegian
+          Encore.
         </p>
       </TextBox>
       <VideoBox video={video} area="four" />
