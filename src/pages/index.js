@@ -25,8 +25,8 @@ export default function Home() {
       <TextBox area="three" content={gig}>
         <p className="body">
           <br />
-          Zach is currently playing Charlie in Kinky Boots on the Norwegian
-          Encore.
+          Zach is currently playing Charlie Price in Kinky Boots on the
+          Norwegian Encore.
         </p>
       </TextBox>
       <VideoBox video={video} area="four" />
