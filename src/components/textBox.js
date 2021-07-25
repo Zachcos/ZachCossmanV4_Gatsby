@@ -43,6 +43,14 @@ const Wrapper = styled.div`
   a {
     outline: none;
     text-decoration: none;
+    &.learnMore {
+      color: ${color.med};
+      font-weight: ${font.medium};
+      transition: color 0.15s ease-out;
+      &:hover {
+        color: ${color.dark};
+      }
+    }
     &:hover {
       .img-container {
         .zcd {
