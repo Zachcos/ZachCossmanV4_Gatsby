@@ -25,18 +25,9 @@ export default function Home() {
       <TextBox area="three" content={gig}>
         <p className="body">
           <br />
-          Zach is currently playing Charlie Price in Kinky Boots on the
-          Norwegian Encore.
+          Zach is currently in rehearsals to play Charlie Price in Kinky Boots
+          on the Norwegian Encore.
           <br />
-          <br />
-          <a
-            className="learnMore"
-            href="https://google.com"
-            target="_BLANK"
-            rel="noreferrer"
-          >
-            Learn More
-          </a>
         </p>
       </TextBox>
       <VideoBox video={video} area="four" />
