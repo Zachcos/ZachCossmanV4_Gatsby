@@ -15,7 +15,7 @@ export default function Home() {
   const gig = {
     heading: 'Footloose',
     subheading: 'Norwegian Cruise Lines',
-    subnote: 'Wes, April 13th',
+    subnote: 'Wed, April 13th',
   };
 
   return (
