@@ -13,9 +13,9 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 export default function Home() {
   const gig = {
-    heading: 'Kinky Boots',
+    heading: 'Footloose',
     subheading: 'Norwegian Cruise Lines',
-    subnote: 'Mon, July 26th',
+    subnote: 'Wes, April 13th',
   };
 
   return (
@@ -25,8 +25,8 @@ export default function Home() {
       <TextBox area="three" content={gig}>
         <p className="body">
           <br />
-          Zach is currently playing Charlie Price in Kinky Boots on the
-          Norwegian Encore.
+          Zach is currently in rehearsals to play Ren McCormack in Footloose on
+          the Norwegian Joy.
           <br />
         </p>
       </TextBox>
