@@ -15,7 +15,7 @@ export default function Home() {
   const gig = {
     heading: 'Footloose',
     subheading: 'Norwegian Cruise Lines',
-    subnote: 'Wed, April 13th',
+    subnote: 'Mon, May 23th',
   };
 
   return (
@@ -25,8 +25,8 @@ export default function Home() {
       <TextBox area="three" content={gig}>
         <p className="body">
           <br />
-          Zach is currently in rehearsals to play Ren McCormack in Footloose on
-          the Norwegian Joy.
+          Zach is currently playing Ren McCormack in Footloose on the Norwegian
+          Joy.
           <br />
         </p>
       </TextBox>
