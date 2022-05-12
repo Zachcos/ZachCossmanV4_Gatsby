@@ -45,7 +45,7 @@ export default function VideoBox({ video, area, ref }) {
   }
   return (
     <Wrapper style={{ gridArea: area }} ref={onLightGallery}>
-      <a href="https://youtu.be/M7OKn9vBj9M">
+      <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip">
         <i className="far fa-6x fa-play-circle" />
         <video src={video} autoPlay loop muted playsInline />
       </a>
