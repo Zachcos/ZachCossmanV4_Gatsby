@@ -16,6 +16,8 @@ export default function Home() {
     heading: 'Footloose',
     subheading: 'Norwegian Cruise Lines',
     subnote: 'Mon, May 23th',
+    info:
+      'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.',
   };
 
   return (
@@ -25,8 +27,7 @@ export default function Home() {
       <TextBox area="three" content={gig}>
         <p className="body">
           <br />
-          Zach is currently playing Ren McCormack in Footloose on the Norwegian
-          Joy.
+          {gig.info}
           <br />
         </p>
       </TextBox>
