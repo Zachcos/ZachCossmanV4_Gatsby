@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { color } from '../imports/variables';
-import 'lightgallery';
-import 'lg-video';
-import '../css/lightgallery.css';
+// import 'lightgallery';
+// import 'lg-video';
+// import '../css/lightgallery.css';
 
 const Wrapper = styled.div`
   align-items: center;
@@ -40,11 +40,12 @@ const Wrapper = styled.div`
 `;
 
 export default function VideoBox({ video, area, ref }) {
-  function onLightGallery(node) {
-    $(node).lightGallery();
-  }
+  // function onLightGallery(node) {
+  //   $(node).lightGallery();
+  // }
   return (
-    <Wrapper style={{ gridArea: area }} ref={onLightGallery}>
+    // <Wrapper style={{ gridArea: area }} ref={onLightGallery}>
+    <Wrapper style={{ gridArea: area }}>
       <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip">
         <i className="far fa-6x fa-play-circle" />
         <video src={video} autoPlay loop muted playsInline />

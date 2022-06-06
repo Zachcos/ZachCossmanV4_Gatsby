@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { color, device, font } from '../imports/variables';
-import 'lightgallery';
-import 'lg-video';
-import '../css/lightgallery.css';
+// import 'lightgallery';
+// import 'lg-video';
+// import '../css/lightgallery.css';
 import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
 
