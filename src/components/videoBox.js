@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-// import $ from 'jquery';
 import { color } from '../imports/variables';
-// import 'lightgallery';
-// import 'lg-video';
-// import '../css/lightgallery.css';
+
+import LightGallery from 'lightgallery/react';
+import lgVideo from 'lightgallery/plugins/video';
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import 'lightgallery/css/lightGallery.css';
 
 const Wrapper = styled.div`
   align-items: center;
@@ -45,11 +46,19 @@ export default function VideoBox({ video, area, ref }) {
   // }
   return (
     // <Wrapper style={{ gridArea: area }} ref={onLightGallery}>
+    // <Wrapper style={{ gridArea: area }}>
+    //   <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip">
+    //     <i className="far fa-6x fa-play-circle" />
+    //     <video src={video} autoPlay loop muted playsInline />
+    //   </a>
+    // </Wrapper>
     <Wrapper style={{ gridArea: area }}>
-      <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip">
-        <i className="far fa-6x fa-play-circle" />
-        <video src={video} autoPlay loop muted playsInline />
-      </a>
+      <LightGallery plugins={[lgThumbnail, lgVideo]}>
+        <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip" data-src="https://youtu.be/M7OKn9vBj9M">
+          <i className="far fa-6x fa-play-circle" />
+          <video src={video} autoPlay loop muted playsInline />
+        </a>
+      </LightGallery>
     </Wrapper>
   );
 }
