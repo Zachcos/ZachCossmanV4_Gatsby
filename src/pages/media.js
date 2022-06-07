@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-// import $ from 'jquery';
 import { color, device, font } from '../imports/variables';
-// import 'lightgallery';
-// import 'lg-video';
-// import '../css/lightgallery.css';
 import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
 
 import video from '../../static/assets/ncl_thumbnail.mp4';
+
+import LightGallery from 'lightgallery/react';
+import lgVideo from 'lightgallery/plugins/video';
+// import 'lightgallery/css/lightGallery.css'
 
 const Wrapper = styled.div`
   align-items: center;
@@ -48,15 +48,18 @@ const Wrapper = styled.div`
 `;
 
 export default function Media({ data }) {
-  function onLightGallery(node) {
-    $(node).lightGallery();
-  }
+  // function onLightGallery(node) {
+  //   $(node).lightGallery();
+  // }
 
   return (
     <>
       <Wrapper>
         <h2 className="gallery-header">Headshots</h2>
-        <div className="gallery gallery--photo" ref={onLightGallery}>
+        {/* <div className="gallery gallery--photo" ref={onLightGallery}> */}
+
+        {/* <div className="gallery gallery--photo"> */}
+        <LightGallery elementClassNames='gallery gallery--photo'>
           {data.images.nodes
             .filter((item) => item.original.src.includes('headshot'))
             .map((img) => (
@@ -64,9 +67,11 @@ export default function Media({ data }) {
                 <Img fluid={img.fluid} alt="" />
               </a>
             ))}
-        </div>
+            </LightGallery>
+        {/* </div> */}
         <h2 className="gallery-header">Covers</h2>
-        <div className="gallery gallery--video" ref={onLightGallery}>
+        {/* <div className="gallery gallery--video" ref={onLightGallery}> */}
+        <div className="gallery gallery--video">
           {data.videos.nodes.map((item) => {
             const current = item.findMe;
             return data.images.nodes
