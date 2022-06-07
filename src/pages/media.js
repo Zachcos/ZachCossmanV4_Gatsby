@@ -56,9 +56,6 @@ export default function Media({ data }) {
     <>
       <Wrapper>
         <h2 className="gallery-header">Headshots</h2>
-        {/* <div className="gallery gallery--photo" ref={onLightGallery}> */}
-
-        {/* <div className="gallery gallery--photo"> */}
         <LightGallery elementClassNames='gallery gallery--photo'>
           {data.images.nodes
             .filter((item) => item.original.src.includes('headshot'))
@@ -68,7 +65,6 @@ export default function Media({ data }) {
               </a>
             ))}
             </LightGallery>
-        {/* </div> */}
         <h2 className="gallery-header">Covers</h2>
         {/* <div className="gallery gallery--video" ref={onLightGallery}> */}
         <div className="gallery gallery--video">
