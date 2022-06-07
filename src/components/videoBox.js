@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
+  .lg-react-element {
+    width: 100%;
+    height: 100%;
+  }
   &:hover {
     i {
       opacity: 1;
