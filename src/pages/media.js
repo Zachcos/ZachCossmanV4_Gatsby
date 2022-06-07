@@ -66,25 +66,24 @@ export default function Media({ data }) {
             ))}
             </LightGallery>
         <h2 className="gallery-header">Covers</h2>
-        {/* <div className="gallery gallery--video" ref={onLightGallery}> */}
-        <div className="gallery gallery--video">
+        <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]}>
           {data.videos.nodes.map((item) => {
             const current = item.findMe;
             return data.images.nodes
-              .filter((item2) => item2.fluid.src.includes(current))
-              .map((item2) => (
-                <a
-                  href={item.videoUrl}
-                  key={item.id}
-                  alt={item.title}
-                  className="thumb"
-                >
+            .filter((item2) => item2.fluid.src.includes(current))
+            .map((item2) => (
+              <a
+              href={item.videoUrl}
+              key={item.id}
+              alt={item.title}
+              className="thumb"
+              >
                   <Img fluid={item2.fluid} alt={item2.title} />
                 </a>
               ));
-          })}
-        </div>
-      </Wrapper>
+            })}
+          </LightGallery>
+        </Wrapper>
       <VideoBox video={video} area="four" />
       <DownloadBox area="five" theme="dark" />
     </>
