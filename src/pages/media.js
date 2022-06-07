@@ -48,10 +48,6 @@ const Wrapper = styled.div`
 `;
 
 export default function Media({ data }) {
-  // function onLightGallery(node) {
-  //   $(node).lightGallery();
-  // }
-
   return (
     <>
       <Wrapper>
