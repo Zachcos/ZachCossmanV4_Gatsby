@@ -10,7 +10,8 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
-import 'lightgallery/css/lightGallery.css'
+import 'lightgallery/css/lg-video.css';
+import 'lightgallery/css/lightGallery.css';
 
 const Wrapper = styled.div`
   align-items: center;
@@ -62,14 +63,14 @@ export default function Media({ data }) {
             ))}
             </LightGallery>
         <h2 className="gallery-header">Covers</h2>
-        <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]}>
+        <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]} autoplayVideoOnSlide>
           {data.videos.nodes.map((item) => {
             const current = item.findMe;
             return data.images.nodes
             .filter((item2) => item2.fluid.src.includes(current))
             .map((item2) => (
               <a
-              href={item.videoUrl}
+              data-src={item.videoUrl}
               key={item.id}
               alt={item.title}
               className="thumb"
