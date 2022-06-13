@@ -44,18 +44,8 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function VideoBox({ video, area, ref }) {
-  // function onLightGallery(node) {
-  //   $(node).lightGallery();
-  // }
+export default function VideoBox({ video, area }) {
   return (
-    // <Wrapper style={{ gridArea: area }} ref={onLightGallery}>
-    // <Wrapper style={{ gridArea: area }}>
-    //   <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip">
-    //     <i className="far fa-6x fa-play-circle" />
-    //     <video src={video} autoPlay loop muted playsInline />
-    //   </a>
-    // </Wrapper>
     <Wrapper style={{ gridArea: area }}>
       <LightGallery plugins={[lgThumbnail, lgVideo]}>
         <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip" data-src="https://youtu.be/M7OKn9vBj9M">
