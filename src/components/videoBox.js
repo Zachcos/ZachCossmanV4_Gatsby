@@ -5,7 +5,7 @@ import { color } from '../imports/variables';
 import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
-import 'lightgallery/css/lightGallery.css';
+import 'lightgallery/css/lightgallery.css';
 
 const Wrapper = styled.div`
   align-items: center;
