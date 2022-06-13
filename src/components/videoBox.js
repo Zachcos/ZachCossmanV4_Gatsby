@@ -4,7 +4,6 @@ import { color } from '../imports/variables';
 
 import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
-import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import 'lightgallery/css/lightgallery.css';
 
 const Wrapper = styled.div`
@@ -47,7 +46,7 @@ const Wrapper = styled.div`
 export default function VideoBox({ video, area }) {
   return (
     <Wrapper style={{ gridArea: area }}>
-      <LightGallery plugins={[lgThumbnail, lgVideo]}>
+      <LightGallery plugins={[lgVideo]}>
         <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip" data-src="https://youtu.be/M7OKn9vBj9M">
           <i className="far fa-6x fa-play-circle" />
           <video src={video} autoPlay loop muted playsInline />
