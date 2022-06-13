@@ -11,7 +11,7 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
 import 'lightgallery/css/lg-video.css';
-import 'lightgallery/css/lightGallery.css';
+import 'lightgallery/css/lightgallery.css';
 
 const Wrapper = styled.div`
   align-items: center;
