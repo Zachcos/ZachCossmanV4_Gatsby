@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-// import Img from 'gatsby-image';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { color, device, font } from '../imports/variables';
 import DownloadBox from '../components/downloadBox';
@@ -121,29 +120,3 @@ export const query = graphql`
     }
   }
 `;
-
-// export const query = graphql`
-//   query {
-//     images: allImageSharp(sort: { fields: fixed___originalName, order: ASC }) {
-//       nodes {
-//         id
-//         fluid(maxWidth: 250, maxHeight: 250, quality: 70) {
-//           ...GatsbyImageSharpFluid
-//         }
-//         original {
-//           src
-//         }
-//       }
-//     }
-
-//     videos: allVideoDataJson {
-//       nodes {
-//         id
-//         title
-//         artist
-//         videoUrl
-//         findMe
-//       }
-//     }
-//   }
-// `;
