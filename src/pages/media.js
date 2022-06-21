@@ -45,6 +45,9 @@ const Wrapper = styled.div`
       max-height: 125px;
       max-width: 125px;
       overflow: hidden;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 `;
