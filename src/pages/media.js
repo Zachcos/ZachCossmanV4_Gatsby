@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { color, device, font } from '../imports/variables';
 import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
@@ -43,27 +44,28 @@ const Wrapper = styled.div`
       margin: 10px 5px;
       max-height: 125px;
       max-width: 125px;
-      width: 100%;
+      overflow: hidden;
     }
   }
 `;
 
 export default function Media({ data }) {
+  const allImages = data.allImageSharp.edges;
   return (
     <>
       <Wrapper>
         <h2 className="gallery-header">Headshots</h2>
         <LightGallery elementClassNames='gallery gallery--photo'>
-          {data.images.nodes
-            .filter((item) => item.original.src.includes('headshot'))
-            .map((img) => (
-              <a href={img.original.src} key={img.id} className="thumb">
-                <Img fluid={img.fluid} alt="" />
+            {allImages
+            .filter(item => item.node.original.src.includes('headshot'))
+            .map(img => (
+              <a data-src={img.node.original.src} key={img.node.id} className="thumb">
+                <GatsbyImage image={img.node.gatsbyImageData} alt='this is an alt text'/>
               </a>
             ))}
             </LightGallery>
         <h2 className="gallery-header">Covers</h2>
-        <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]} autoplayVideoOnSlide>
+        {/* <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]} autoplayVideoOnSlide>
           {data.videos.nodes.map((item) => {
             const current = item.findMe;
             return data.images.nodes
@@ -79,7 +81,7 @@ export default function Media({ data }) {
                 </a>
               ));
             })}
-          </LightGallery>
+          </LightGallery> */}
         </Wrapper>
       <VideoBox video={video} area="four" />
       <DownloadBox area="five" theme="dark" />
@@ -89,26 +91,42 @@ export default function Media({ data }) {
 
 export const query = graphql`
   query {
-    images: allImageSharp(sort: { fields: fixed___originalName, order: ASC }) {
-      nodes {
-        id
-        fluid(maxWidth: 250, maxHeight: 250, quality: 70) {
-          ...GatsbyImageSharpFluid
+    allImageSharp {
+      edges {
+        node {
+          id
+          original {
+            src
+          }
+          gatsbyImageData
         }
-        original {
-          src
-        }
-      }
-    }
-
-    videos: allVideoDataJson {
-      nodes {
-        id
-        title
-        artist
-        videoUrl
-        findMe
       }
     }
   }
 `;
+
+// export const query = graphql`
+//   query {
+//     images: allImageSharp(sort: { fields: fixed___originalName, order: ASC }) {
+//       nodes {
+//         id
+//         fluid(maxWidth: 250, maxHeight: 250, quality: 70) {
+//           ...GatsbyImageSharpFluid
+//         }
+//         original {
+//           src
+//         }
+//       }
+//     }
+
+//     videos: allVideoDataJson {
+//       nodes {
+//         id
+//         title
+//         artist
+//         videoUrl
+//         findMe
+//       }
+//     }
+//   }
+// `;
