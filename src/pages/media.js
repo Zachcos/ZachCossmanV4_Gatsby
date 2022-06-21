@@ -53,7 +53,8 @@ const Wrapper = styled.div`
 `;
 
 export default function Media({ data }) {
-  const allImages = data.allImageSharp.edges;
+  const allImages = data.images.edges;
+  const allVideos = data.videos.edges;
   return (
     <>
       <Wrapper>
@@ -63,28 +64,29 @@ export default function Media({ data }) {
             .filter(item => item.node.original.src.includes('headshot'))
             .map(img => (
               <a data-src={img.node.original.src} key={img.node.id} className="thumb">
-                <GatsbyImage image={img.node.gatsbyImageData} alt='this is an alt text'/>
+                <GatsbyImage image={img.node.gatsbyImageData} alt='headshot'/>
               </a>
             ))}
             </LightGallery>
         <h2 className="gallery-header">Covers</h2>
-        {/* <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]} autoplayVideoOnSlide>
-          {data.videos.nodes.map((item) => {
-            const current = item.findMe;
-            return data.images.nodes
-            .filter((item2) => item2.fluid.src.includes(current))
+        <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]} autoplayVideoOnSlide>
+          {allVideos
+          .map((item) => {
+            const current = item.node.findMe;
+            return allImages
+            .filter((item2) => item2.node.original.src.includes(current))
             .map((item2) => (
               <a
-              data-src={item.videoUrl}
-              key={item.id}
-              alt={item.title}
+              data-src={item.node.videoUrl}
+              key={item.node.id}
+              alt={item.node.title}
               className="thumb"
               >
-                  <Img fluid={item2.fluid} alt={item2.title} />
+                  <GatsbyImage image={item2.node.gatsbyImageData} alt={item.node.title} />
                 </a>
               ));
             })}
-          </LightGallery> */}
+          </LightGallery>
         </Wrapper>
       <VideoBox video={video} area="four" />
       <DownloadBox area="five" theme="dark" />
@@ -94,7 +96,7 @@ export default function Media({ data }) {
 
 export const query = graphql`
   query {
-    allImageSharp {
+    images: allImageSharp {
       edges {
         node {
           id
@@ -102,6 +104,18 @@ export const query = graphql`
             src
           }
           gatsbyImageData
+        }
+      }
+    }
+    videos: allVideoDataJson {
+      edges {
+        node
+        {
+          id
+          title
+          artist
+          findMe
+          videoUrl
         }
       }
     }
