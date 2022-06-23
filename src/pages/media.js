@@ -102,7 +102,11 @@ export const query = graphql`
           original {
             src
           }
-          gatsbyImageData
+          gatsbyImageData(
+            width: 200
+            height: 200
+            placeholder: BLURRED
+          )
         }
       }
     }
