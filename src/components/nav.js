@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+import { motion, LayoutGroup, AnimatePresence } from 'framer-motion';
 import { color, font, device } from '../imports/variables';
 
 const NavWrapper = styled(motion.div)`
@@ -109,7 +109,7 @@ export default function Nav() {
     }
   }, [isOpen]);
   return (
-    <AnimateSharedLayout>
+    <LayoutGroup>
       <NavWrapper layout id="nav-wrap">
         <NavIcon id="nav-btn" onClick={() => setIsOpen(!isOpen)}>
           <motion.div layout className="line-wrapper">
@@ -121,7 +121,7 @@ export default function Nav() {
           {isOpen && <Menu setIsOpen={setIsOpen} />}
         </AnimatePresence>
       </NavWrapper>
-    </AnimateSharedLayout>
+    </LayoutGroup>
   );
 }
 
