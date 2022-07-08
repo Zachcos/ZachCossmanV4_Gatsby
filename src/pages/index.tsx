@@ -11,7 +11,7 @@ import DownloadBox from '../components/downloadBox';
 import headshot from '../../static/assets/headshot.jpg';
 import video from '../../static/assets/ncl_thumbnail.mp4';
 
-const Home: React.FC = () => {
+export default function Home() {
   const gig = {
     heading: 'Footloose',
     subheading: 'Norwegian Cruise Lines',
@@ -34,6 +34,4 @@ const Home: React.FC = () => {
       <DownloadBox area='five' theme='dark' />
     </>
   );
-};
-
-export default Home;
+}
