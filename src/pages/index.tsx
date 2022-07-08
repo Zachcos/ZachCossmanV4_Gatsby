@@ -2,14 +2,14 @@ import React from 'react';
 
 // Components
 import HeroText from '../components/heroText';
-// import PhotoBox from '../components/photoBox';
-// import TextBox from '../components/textBox';
-// import VideoBox from '../components/videoBox';
-// import DownloadBox from '../components/downloadBox';
+import PhotoBox from '../components/photoBox';
+import TextBox from '../components/textBox';
+import VideoBox from '../components/videoBox';
+import DownloadBox from '../components/downloadBox';
 
 // Assets
-// import headshot from '../../static/assets/headshot.jpg';
-// import video from '../../static/assets/ncl_thumbnail.mp4';
+import headshot from '../../static/assets/headshot.jpg';
+import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home: React.FC = () => {
   const gig = {
@@ -21,10 +21,9 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <h1>Hello cruel world!</h1>
       <HeroText text='Zach Cossman' area='one' />
-      {/* <PhotoBox image={headshot} area='two' />
-      <TextBox area='three' content={gig}>
+      <PhotoBox image={headshot} area='two' />
+      <TextBox area='three' content={gig} theme=''>
         <p className='body'>
           <br />
           {gig.info}
@@ -32,7 +31,7 @@ const Home: React.FC = () => {
         </p>
       </TextBox>
       <VideoBox video={video} area='four' />
-      <DownloadBox area='five' theme='dark' /> */}
+      <DownloadBox area='five' theme='dark' />
     </>
   );
 };
