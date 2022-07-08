@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-// import HeroText from '../components/heroText';
+import HeroText from '../components/heroText';
 // import PhotoBox from '../components/photoBox';
 // import TextBox from '../components/textBox';
 // import VideoBox from '../components/videoBox';
@@ -22,8 +22,8 @@ const Home: React.FC = () => {
   return (
     <>
       <h1>Hello cruel world!</h1>
-      {/* <HeroText text='Zach Cossman' area='one' />
-      <PhotoBox image={headshot} area='two' />
+      <HeroText text='Zach Cossman' area='one' />
+      {/* <PhotoBox image={headshot} area='two' />
       <TextBox area='three' content={gig}>
         <p className='body'>
           <br />
