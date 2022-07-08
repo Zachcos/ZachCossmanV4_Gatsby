@@ -23,35 +23,35 @@ export default function Contact() {
 
   return (
     <>
-      <HeroText text="get in touch" area="one" />
-      <TextBox area="two" content={agentDetails} theme="light">
+      <HeroText text='get in touch' area='one' />
+      <TextBox area='two' content={agentDetails} theme='light'>
         <a
-          href="https://annsteeleagency.com"
-          target="_blank"
-          rel="noreferrer"
+          href='https://annsteeleagency.com'
+          target='_blank'
+          rel='noreferrer'
           style={{ color: `${color.dark}` }}
         >
-          <div className="img-container">
-            <img src={ASALogo} alt="" />
-            <span className="asa emphasis">Visit ASA.com</span>
+          <div className='img-container'>
+            <img src={ASALogo} alt='' />
+            <span className='asa emphasis'>Visit ASA.com</span>
           </div>
         </a>
       </TextBox>
-      <DownloadBox area="three" theme="dark" />
-      <TextBox area="four" content={designDetails} theme="accent">
+      <DownloadBox area='three' theme='dark' />
+      <TextBox area='four' content={designDetails} theme='accent'>
         <a
-          href="https://zachcossmandesigns.com"
-          target="_blank"
-          rel="noreferrer"
+          href='https://zachcossmandesigns.com'
+          target='_blank'
+          rel='noreferrer'
           style={{ color: `${color.dark}` }}
         >
-          <div className="img-container">
-            <img src={ZCDLogo} alt="" />
-            <span className="zcd emphasis">Zach Cossman Designs</span>
+          <div className='img-container'>
+            <img src={ZCDLogo} alt='' />
+            <span className='zcd emphasis'>Zach Cossman Designs</span>
           </div>
         </a>
       </TextBox>
-      <PhotoBox image={headshot} area="five" />
+      <PhotoBox image={headshot} area='five' />
     </>
   );
 }

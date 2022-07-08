@@ -51,29 +51,35 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function Media({ data }) {
+interface Props {
+  data: object;
+}
+
+export default function Media({ data }: Props) {
+  console.log('this is our data: ', data);
+
   const allImages = data.images.edges;
   const allVideos = data.videos.edges;
   return (
     <>
       <Wrapper>
-        <h2 className="gallery-header">Headshots</h2>
-        <LightGallery elementClassNames="gallery gallery--photo">
+        <h2 className='gallery-header'>Headshots</h2>
+        <LightGallery elementClassNames='gallery gallery--photo'>
           {allImages
             .filter((item) => item.node.original.src.includes('headshot'))
             .map((img) => (
               <a
                 data-src={img.node.original.src}
                 key={img.node.id}
-                className="thumb"
+                className='thumb'
               >
-                <GatsbyImage image={img.node.gatsbyImageData} alt="headshot" />
+                <GatsbyImage image={img.node.gatsbyImageData} alt='headshot' />
               </a>
             ))}
         </LightGallery>
-        <h2 className="gallery-header">Covers</h2>
+        <h2 className='gallery-header'>Covers</h2>
         <LightGallery
-          elementClassNames="gallery gallery--video"
+          elementClassNames='gallery gallery--video'
           plugins={[lgVideo]}
           autoplayVideoOnSlide
         >
@@ -86,7 +92,7 @@ export default function Media({ data }) {
                   data-src={item.node.videoUrl}
                   key={item.node.id}
                   alt={item.node.title}
-                  className="thumb"
+                  className='thumb'
                 >
                   <GatsbyImage
                     image={item2.node.gatsbyImageData}
@@ -97,35 +103,35 @@ export default function Media({ data }) {
           })}
         </LightGallery>
       </Wrapper>
-      <VideoBox video={video} area="four" />
-      <DownloadBox area="five" theme="dark" />
+      <VideoBox video={video} area='four' />
+      <DownloadBox area='five' theme='dark' />
     </>
   );
 }
 
-// export const query = graphql`
-//   query {
-//     images: allImageSharp {
-//       edges {
-//         node {
-//           id
-//           original {
-//             src
-//           }
-//           gatsbyImageData(width: 200, height: 200, placeholder: BLURRED)
-//         }
-//       }
-//     }
-//     videos: allVideoDataJson {
-//       edges {
-//         node {
-//           id
-//           title
-//           artist
-//           findMe
-//           videoUrl
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query {
+    images: allImageSharp {
+      edges {
+        node {
+          id
+          original {
+            src
+          }
+          gatsbyImageData(width: 200, height: 200, placeholder: BLURRED)
+        }
+      }
+    }
+    videos: allVideoDataJson {
+      edges {
+        node {
+          id
+          title
+          artist
+          findMe
+          videoUrl
+        }
+      }
+    }
+  }
+`;
