@@ -1,4 +1,3 @@
-/* eslint-disable import/no-named-as-default-member */
 import { createGlobalStyle } from 'styled-components';
 import { color, device } from './variables';
 
