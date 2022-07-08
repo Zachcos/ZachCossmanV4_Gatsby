@@ -11,7 +11,9 @@ import React from 'react';
 // import headshot from '../../static/assets/headshot.jpg';
 // import video from '../../static/assets/ncl_thumbnail.mp4';
 
-const Home: React.FC = () => {
+interface Props {}
+
+const Home: React.FC<Props> = () => (
   // const gig = {
   //   heading: 'Footloose',
   //   subheading: 'Norwegian Cruise Lines',
@@ -19,23 +21,22 @@ const Home: React.FC = () => {
   //   info: 'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.',
   // };
 
-  return (
-    // <>
-    //   <HeroText text='Zach Cossman' area='one' />
-    //   <PhotoBox image={headshot} area='two' />
-    //   <TextBox area='three' content={gig}>
-    //     <p className='body'>
-    //       <br />
-    //       {gig.info}
-    //       <br />
-    //     </p>
-    //   </TextBox>
-    //   <VideoBox video={video} area='four' />
-    //   <DownloadBox area='five' theme='dark' />
-    // </>
-  );
-} ;
+  // return (
+  //   <>
+  //     <HeroText text='Zach Cossman' area='one' />
+  //     <PhotoBox image={headshot} area='two' />
+  //     <TextBox area='three' content={gig}>
+  //       <p className='body'>
+  //         <br />
+  //         {gig.info}
+  //         <br />
+  //       </p>
+  //     </TextBox>
+  //     <VideoBox video={video} area='four' />
+  //     <DownloadBox area='five' theme='dark' />
+  //   </>
+  // );
+  <h1>Hello world!</h1>
+);
 
 export default Home;
-
-
