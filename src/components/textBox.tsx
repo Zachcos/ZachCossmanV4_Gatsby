@@ -77,7 +77,14 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function TextBox({ content, area, children, theme }) {
+interface Props {
+  content: string;
+  area: string;
+  children: JSX.Element;
+  theme: string;
+}
+
+export default function TextBox({ content, area, children, theme }: Props) {
   const { heading, subheading, subnote } = content;
   let style = '';
 
@@ -110,9 +117,9 @@ export default function TextBox({ content, area, children, theme }) {
 
   return (
     <Wrapper style={{ gridArea: area, ...style }}>
-      <h5 className="subnote">{subnote}</h5>
-      <h2 className="heading">{heading}</h2>
-      <h3 className="subheading">{subheading}</h3>
+      <h5 className='subnote'>{subnote}</h5>
+      <h2 className='heading'>{heading}</h2>
+      <h3 className='subheading'>{subheading}</h3>
       {children}
     </Wrapper>
   );

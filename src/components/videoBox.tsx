@@ -43,12 +43,21 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function VideoBox({ video, area }) {
+interface Props {
+  video: string;
+  area: string;
+}
+
+export default function VideoBox({ video, area }: Props) {
   return (
     <Wrapper style={{ gridArea: area }}>
       <LightGallery plugins={[lgVideo]}>
-        <a href="https://youtu.be/M7OKn9vBj9M" aria-label="video clip" data-src="https://youtu.be/M7OKn9vBj9M">
-          <i className="far fa-6x fa-play-circle" />
+        <a
+          href='https://youtu.be/M7OKn9vBj9M'
+          aria-label='video clip'
+          data-src='https://youtu.be/M7OKn9vBj9M'
+        >
+          <i className='far fa-6x fa-play-circle' />
           <video src={video} autoPlay loop muted playsInline />
         </a>
       </LightGallery>
