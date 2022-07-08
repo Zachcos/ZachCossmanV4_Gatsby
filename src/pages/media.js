@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import LightGallery from 'lightgallery/react';
+import lgVideo from 'lightgallery/plugins/video';
 import { color, device, font } from '../imports/variables';
 import DownloadBox from '../components/downloadBox';
 import VideoBox from '../components/videoBox';
 
 import video from '../../static/assets/ncl_thumbnail.mp4';
 
-import LightGallery from 'lightgallery/react';
-import lgVideo from 'lightgallery/plugins/video';
 import 'lightgallery/css/lg-video.css';
 import 'lightgallery/css/lightgallery.css';
 
@@ -58,69 +58,74 @@ export default function Media({ data }) {
     <>
       <Wrapper>
         <h2 className="gallery-header">Headshots</h2>
-        <LightGallery elementClassNames='gallery gallery--photo'>
-            {allImages
-            .filter(item => item.node.original.src.includes('headshot'))
-            .map(img => (
-              <a data-src={img.node.original.src} key={img.node.id} className="thumb">
-                <GatsbyImage image={img.node.gatsbyImageData} alt='headshot'/>
+        <LightGallery elementClassNames="gallery gallery--photo">
+          {allImages
+            .filter((item) => item.node.original.src.includes('headshot'))
+            .map((img) => (
+              <a
+                data-src={img.node.original.src}
+                key={img.node.id}
+                className="thumb"
+              >
+                <GatsbyImage image={img.node.gatsbyImageData} alt="headshot" />
               </a>
             ))}
-            </LightGallery>
+        </LightGallery>
         <h2 className="gallery-header">Covers</h2>
-        <LightGallery elementClassNames='gallery gallery--video' plugins={[lgVideo]} autoplayVideoOnSlide>
-          {allVideos
-          .map((item) => {
+        <LightGallery
+          elementClassNames="gallery gallery--video"
+          plugins={[lgVideo]}
+          autoplayVideoOnSlide
+        >
+          {allVideos.map((item) => {
             const current = item.node.findMe;
             return allImages
-            .filter((item2) => item2.node.original.src.includes(current))
-            .map((item2) => (
-              <a
-              data-src={item.node.videoUrl}
-              key={item.node.id}
-              alt={item.node.title}
-              className="thumb"
-              >
-                  <GatsbyImage image={item2.node.gatsbyImageData} alt={item.node.title} />
+              .filter((item2) => item2.node.original.src.includes(current))
+              .map((item2) => (
+                <a
+                  data-src={item.node.videoUrl}
+                  key={item.node.id}
+                  alt={item.node.title}
+                  className="thumb"
+                >
+                  <GatsbyImage
+                    image={item2.node.gatsbyImageData}
+                    alt={item.node.title}
+                  />
                 </a>
               ));
-            })}
-          </LightGallery>
-        </Wrapper>
+          })}
+        </LightGallery>
+      </Wrapper>
       <VideoBox video={video} area="four" />
       <DownloadBox area="five" theme="dark" />
     </>
   );
 }
 
-export const query = graphql`
-  query {
-    images: allImageSharp {
-      edges {
-        node {
-          id
-          original {
-            src
-          }
-          gatsbyImageData(
-            width: 200
-            height: 200
-            placeholder: BLURRED
-          )
-        }
-      }
-    }
-    videos: allVideoDataJson {
-      edges {
-        node
-        {
-          id
-          title
-          artist
-          findMe
-          videoUrl
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     images: allImageSharp {
+//       edges {
+//         node {
+//           id
+//           original {
+//             src
+//           }
+//           gatsbyImageData(width: 200, height: 200, placeholder: BLURRED)
+//         }
+//       }
+//     }
+//     videos: allVideoDataJson {
+//       edges {
+//         node {
+//           id
+//           title
+//           artist
+//           findMe
+//           videoUrl
+//         }
+//       }
+//     }
+//   }
+// `;
