@@ -30,7 +30,7 @@ interface Props {
   text: string;
 }
 
-const HeroText = ({ area, text }: Props) => {
+export default function HeroText({ area, text }: Props) {
   return (
     <NameBox style={{ gridArea: area }}>
       <div className='container'>
@@ -38,6 +38,4 @@ const HeroText = ({ area, text }: Props) => {
       </div>
     </NameBox>
   );
-};
-
-export default HeroText;
+}
