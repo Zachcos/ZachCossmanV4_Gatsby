@@ -108,9 +108,9 @@ export default function Nav() {
   }, [isOpen]);
   return (
     <LayoutGroup>
-      <NavWrapper layout id="nav-wrap">
-        <NavIcon id="nav-btn" onClick={() => setIsOpen(!isOpen)}>
-          <motion.div layout className="line-wrapper">
+      <NavWrapper layout id='nav-wrap'>
+        <NavIcon id='nav-btn' onClick={() => setIsOpen(!isOpen)}>
+          <motion.div layout className='line-wrapper'>
             <span className={isOpen ? 'open' : ''} />
             <span className={isOpen ? 'open' : ''} />
           </motion.div>
@@ -131,23 +131,23 @@ function Menu({ setIsOpen }) {
       animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.2 } }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
     >
-      <div className="link">
-        <Link to="/" onClick={() => setIsOpen(false)}>
+      <div className='link'>
+        <Link to='/' onClick={() => setIsOpen(false)}>
           home
         </Link>
       </div>
-      <div className="link">
-        <Link to="/about" onClick={() => setIsOpen(false)}>
+      <div className='link'>
+        <Link to='/about' onClick={() => setIsOpen(false)}>
           about
         </Link>
       </div>
-      <div className="link">
-        <Link to="/media" onClick={() => setIsOpen(false)}>
+      <div className='link'>
+        <Link to='/media' onClick={() => setIsOpen(false)}>
           media
         </Link>
       </div>
-      <div className="link">
-        <Link to="/contact" onClick={() => setIsOpen(false)}>
+      <div className='link'>
+        <Link to='/contact' onClick={() => setIsOpen(false)}>
           contact
         </Link>
       </div>
