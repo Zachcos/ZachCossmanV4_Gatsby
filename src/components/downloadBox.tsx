@@ -59,7 +59,12 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function DownloadBox({ area, theme }) {
+interface Props {
+  area: string;
+  theme: string;
+}
+
+export default function DownloadBox({ area, theme }: Props) {
   let style = '';
 
   switch (theme) {
@@ -91,11 +96,11 @@ export default function DownloadBox({ area, theme }) {
 
   return (
     <Wrapper style={{ gridArea: area, ...style }}>
-      <h2 className="heading">Download</h2>
-      <h3 className="subheading">headshot/resume</h3>
-      <a href={resume} target="_blank" rel="noreferrer">
-        <div className="download">
-          <i className="fas fa-2x fa-file-download" />
+      <h2 className='heading'>Download</h2>
+      <h3 className='subheading'>headshot/resume</h3>
+      <a href={resume} target='_blank' rel='noreferrer'>
+        <div className='download'>
+          <i className='fas fa-2x fa-file-download' />
           Zach Cossman Resume
         </div>
       </a>
