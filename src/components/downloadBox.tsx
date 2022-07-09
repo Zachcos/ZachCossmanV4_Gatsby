@@ -65,7 +65,7 @@ interface Props {
 }
 
 export default function DownloadBox({ area, theme }: Props) {
-  let style = '';
+  let style = {};
 
   switch (theme) {
     case 'dark':
