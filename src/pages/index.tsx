@@ -16,8 +16,10 @@ export default function Home() {
     heading: 'Footloose',
     subheading: 'Norwegian Cruise Lines',
     subnote: 'Mon, May 23th',
-    info: 'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.',
   };
+
+  const blurb =
+    'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.';
 
   return (
     <>
@@ -26,7 +28,7 @@ export default function Home() {
       <TextBox area='three' content={gig} theme=''>
         <p className='body'>
           <br />
-          {gig.info}
+          {blurb}
           <br />
         </p>
       </TextBox>
