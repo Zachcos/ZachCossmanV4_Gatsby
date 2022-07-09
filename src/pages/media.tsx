@@ -52,12 +52,55 @@ const Wrapper = styled.div`
 `;
 
 interface DataProps {
-  data: object;
+  data: {
+    images: {
+      edges: {
+        node: {
+          id: string;
+          original: {
+            src: string;
+          };
+          gatsbyImageData: Object;
+        };
+        filter: Function;
+      };
+    };
+    videos: {
+      edges: {
+        node: {
+          id: string;
+          title: string;
+          artist: string;
+          findMe: string;
+          videoUrl: string;
+        };
+        map: Function;
+      };
+    };
+  };
+}
+
+interface ImageItemData {
+  node: {
+    id: string;
+    original: {
+      src: string;
+    };
+    gatsbyImageData: any;
+  };
+}
+
+interface VideoItemData {
+  node: {
+    id: string;
+    title: string;
+    artist: string;
+    findMe: string;
+    videoUrl: string;
+  };
 }
 
 export default function Media({ data }: DataProps) {
-  console.log('this is our data: ', data);
-
   const allImages = data.images.edges;
   const allVideos = data.videos.edges;
   return (
@@ -66,8 +109,10 @@ export default function Media({ data }: DataProps) {
         <h2 className='gallery-header'>Headshots</h2>
         <LightGallery elementClassNames='gallery gallery--photo'>
           {allImages
-            .filter((item) => item.node.original.src.includes('headshot'))
-            .map((img) => (
+            .filter((item: ImageItemData) =>
+              item.node.original.src.includes('headshot')
+            )
+            .map((img: ImageItemData) => (
               <a
                 data-src={img.node.original.src}
                 key={img.node.id}
@@ -83,15 +128,16 @@ export default function Media({ data }: DataProps) {
           plugins={[lgVideo]}
           autoplayVideoOnSlide
         >
-          {allVideos.map((item) => {
+          {allVideos.map((item: VideoItemData) => {
             const current = item.node.findMe;
             return allImages
-              .filter((item2) => item2.node.original.src.includes(current))
-              .map((item2) => (
+              .filter((item2: ImageItemData) =>
+                item2.node.original.src.includes(current)
+              )
+              .map((item2: ImageItemData) => (
                 <a
                   data-src={item.node.videoUrl}
                   key={item.node.id}
-                  alt={item.node.title}
                   className='thumb'
                 >
                   <GatsbyImage
