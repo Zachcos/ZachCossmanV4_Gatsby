@@ -44,7 +44,7 @@ export default function About() {
   return (
     <>
       <Wrapper>
-        <div className="bio">
+        <div className='bio'>
           <h2>About me.</h2>
           <p>
             Growing up in Fairfield, Ohio, Zach was exposed to music when he
@@ -71,8 +71,8 @@ export default function About() {
           </p>
         </div>
       </Wrapper>
-      <DownloadBox area="four" theme="dark" />
-      <PhotoBox image={headshot} area="five" />
+      <DownloadBox area='four' theme='dark' />
+      <PhotoBox image={headshot} area='five' />
     </>
   );
 }
