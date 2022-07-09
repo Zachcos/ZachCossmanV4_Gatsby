@@ -35,12 +35,6 @@ const Wrapper = styled.div`
 `;
 
 export default function About() {
-  const details = {
-    heading: '',
-    subheading: 'random facts',
-    subnote: '',
-  };
-
   return (
     <>
       <Wrapper>
