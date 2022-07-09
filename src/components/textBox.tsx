@@ -78,14 +78,20 @@ const Wrapper = styled.div`
 `;
 
 interface Props {
-  content: string;
+  content: ContentTypes;
   area: string;
   children: JSX.Element;
   theme: string;
 }
 
+interface ContentTypes {
+  heading: string;
+  subheading: string;
+  subnote: string;
+}
+
 export default function TextBox({ content, area, children, theme }: Props) {
-  const { heading, subheading, subnote } = content;
+  const { heading, subheading, subnote }: ContentTypes = content;
   let style = {};
 
   switch (theme) {
