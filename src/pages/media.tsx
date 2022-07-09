@@ -51,11 +51,11 @@ const Wrapper = styled.div`
   }
 `;
 
-interface Props {
+interface DataProps {
   data: object;
 }
 
-export default function Media({ data }: Props) {
+export default function Media({ data }: DataProps) {
   console.log('this is our data: ', data);
 
   const allImages = data.images.edges;
