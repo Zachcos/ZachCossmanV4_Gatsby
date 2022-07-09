@@ -98,9 +98,9 @@ export default function Nav() {
 
   useEffect(() => {
     if (isOpen) {
-      document.querySelector('html').style.overflow = 'hidden';
+      document.querySelector('html')!.style.overflow = 'hidden';
     } else if (!isOpen) {
-      document.querySelector('html').style.overflow = 'auto';
+      document.querySelector('html')!.style.overflow = 'auto';
     }
   }, [isOpen]);
   return (
