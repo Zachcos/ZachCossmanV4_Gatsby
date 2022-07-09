@@ -70,9 +70,6 @@ const LinksWrapper = styled(motion.div)`
   position: relative;
   width: 66.666vw;
   z-index: 11;
-
-  /* width: 100vw; */
-  /* height: 100vh; */
   .link {
     font-weight: ${font.medium};
     text-transform: uppercase;
@@ -123,7 +120,11 @@ export default function Nav() {
   );
 }
 
-function Menu({ setIsOpen }) {
+interface Props {
+  setIsOpen: Function;
+}
+
+function Menu({ setIsOpen }: Props) {
   return (
     <LinksWrapper
       layout
