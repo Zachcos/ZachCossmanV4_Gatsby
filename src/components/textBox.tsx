@@ -86,7 +86,7 @@ interface Props {
 
 export default function TextBox({ content, area, children, theme }: Props) {
   const { heading, subheading, subnote } = content;
-  let style = '';
+  let style = {};
 
   switch (theme) {
     case 'dark':
