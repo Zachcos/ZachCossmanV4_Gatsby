@@ -63,10 +63,6 @@ export default function Layout({ children }: Props) {
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
         <meta name='description' content='Zach Cossman - Actor' />
         <title>Zach Cossman</title>
-        <script
-          src='https://kit.fontawesome.com/c3abb1e5c6.js'
-          crossOrigin='anonymous'
-        />
       </Helmet>
       <GlobalStyle />
       <GridWrapper>
