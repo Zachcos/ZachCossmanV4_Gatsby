@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { color, font } from '../imports/variables';
 
 import resume from '../../static/assets/ZachCossman.pdf';
+import { Download } from './icons';
 
 const Wrapper = styled.div`
   box-sizing: border-box;
@@ -41,6 +42,9 @@ const Wrapper = styled.div`
       .download {
         color: ${color.med};
       }
+      svg {
+        fill: ${color.med};
+      }
     }
   }
   .download {
@@ -50,8 +54,8 @@ const Wrapper = styled.div`
     line-height: 1.4rem;
     margin-bottom: 10px;
     transition: color 0.15s ease-out;
-    i {
-      margin-right: 15px;
+    svg {
+      margin-right: 10px;
     }
     .emphasis {
       font-weight: ${font.medium};
@@ -100,7 +104,8 @@ export default function DownloadBox({ area, theme }: Props) {
       <h3 className='subheading'>headshot/resume</h3>
       <a href={resume} target='_blank' rel='noreferrer'>
         <div className='download'>
-          <i className='fas fa-2x fa-file-download' />
+          {/* <i className='fas fa-2x fa-file-download' /> */}
+          <Download />
           Zach Cossman Resume
         </div>
       </a>
