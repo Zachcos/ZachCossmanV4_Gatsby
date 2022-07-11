@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color } from '../imports/variables';
+import { Play } from './icons';
 
 import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     height: 100%;
   }
   &:hover {
-    i {
+    svg {
       opacity: 1;
     }
   }
@@ -27,12 +27,11 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    i {
-      color: ${color.light};
+    svg {
       cursor: pointer;
       opacity: 0.3;
       position: absolute;
-      transition: opacity 0.2s ease-out;
+      transition: opacity 0.15s ease-out;
     }
   }
   video {
@@ -57,7 +56,7 @@ export default function VideoBox({ video, area }: Props) {
           aria-label='video clip'
           data-src='https://youtu.be/M7OKn9vBj9M'
         >
-          <i className='far fa-6x fa-play-circle' />
+          <Play />
           <video src={video} autoPlay loop muted playsInline />
         </a>
       </LightGallery>
