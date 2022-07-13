@@ -104,7 +104,6 @@ export default function DownloadBox({ area, theme }: Props) {
       <h3 className='subheading'>headshot/resume</h3>
       <a href={resume} target='_blank' rel='noreferrer'>
         <div className='download'>
-          {/* <i className='fas fa-2x fa-file-download' /> */}
           <Download />
           Zach Cossman Resume
         </div>
