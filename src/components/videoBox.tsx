@@ -42,12 +42,7 @@ const Wrapper = styled.div`
   }
 `;
 
-interface Props {
-  video: string;
-  area: string;
-}
-
-export default function VideoBox({ video, area }: Props) {
+export default function VideoBox({ video, area }: VideoBoxProps) {
   return (
     <Wrapper style={{ gridArea: area }}>
       <LightGallery plugins={[lgVideo]}>

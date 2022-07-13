@@ -55,10 +55,6 @@ const Wrapper = styled.div`
   }
 `;
 
-interface Props {
-  children: any;
-}
-
-export default function GridWrapper({ children }: Props) {
+export default function GridWrapper({ children }: ChildElementProp) {
   return <Wrapper>{children}</Wrapper>;
 }

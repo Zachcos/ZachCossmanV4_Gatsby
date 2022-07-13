@@ -6,11 +6,7 @@ import GridWrapper from './gridWrapper';
 import IntroOverlay from './introOverlay';
 import Nav from './nav';
 
-interface Props {
-  children: JSX.Element;
-}
-
-export default function Layout({ children }: Props) {
+export default function Layout({ children }: ChildElementProp) {
   useEffect(() => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);

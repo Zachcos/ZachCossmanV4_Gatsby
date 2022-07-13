@@ -120,11 +120,7 @@ export default function Nav() {
   );
 }
 
-interface Props {
-  setIsOpen: Function;
-}
-
-function Menu({ setIsOpen }: Props) {
+function Menu({ setIsOpen }: SetIsOpenProps) {
   return (
     <LinksWrapper
       layout

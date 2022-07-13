@@ -23,12 +23,7 @@ const Wrapper = styled.div`
   }
 `;
 
-interface Props {
-  image: string;
-  area: string;
-}
-
-export default function PhotoBox({ image, area }: Props) {
+export default function PhotoBox({ image, area }: PhotoBoxProps) {
   return (
     <Wrapper style={{ gridArea: area }}>
       <img src={image} alt='' />

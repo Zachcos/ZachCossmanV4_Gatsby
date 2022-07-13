@@ -51,56 +51,7 @@ const Wrapper = styled.div`
   }
 `;
 
-interface DataProps {
-  data: {
-    images: {
-      edges: {
-        node: {
-          id: string;
-          original: {
-            src: string;
-          };
-          gatsbyImageData: Object;
-        };
-        filter: Function;
-      };
-    };
-    videos: {
-      edges: {
-        node: {
-          id: string;
-          title: string;
-          artist: string;
-          findMe: string;
-          videoUrl: string;
-        };
-        map: Function;
-      };
-    };
-  };
-}
-
-interface ImageItemData {
-  node: {
-    id: string;
-    original: {
-      src: string;
-    };
-    gatsbyImageData: any;
-  };
-}
-
-interface VideoItemData {
-  node: {
-    id: string;
-    title: string;
-    artist: string;
-    findMe: string;
-    videoUrl: string;
-  };
-}
-
-export default function Media({ data }: DataProps) {
+export default function Media({ data }: MediaProps) {
   const allImages = data.images.edges;
   const allVideos = data.videos.edges;
   return (
