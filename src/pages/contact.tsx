@@ -9,7 +9,7 @@ import headshot from '../../static/assets/headshot3.jpg';
 import ASALogo from '../../static/assets/ASAlogo.png';
 import ZCDLogo from '../../static/assets/ZCDlogo.svg';
 
-export default function Contact() {
+const Contact = () => {
   const agentDetails = {
     heading: "I'm represented",
     subheading: 'by Ann Steele Agency',
@@ -54,4 +54,6 @@ export default function Contact() {
       <PhotoBox image={headshot} area='five' />
     </>
   );
-}
+};
+
+export default Contact;

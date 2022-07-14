@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function About() {
+const About = () => {
   return (
     <>
       <Wrapper>
@@ -69,4 +69,6 @@ export default function About() {
       <PhotoBox image={headshot} area='five' />
     </>
   );
-}
+};
+
+export default About;

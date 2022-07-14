@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function Media({ data }: MediaProps) {
+const Media = ({ data }: MediaProps) => {
   const allImages = data.images.edges;
   const allVideos = data.videos.edges;
   return (
@@ -104,7 +104,7 @@ export default function Media({ data }: MediaProps) {
       <DownloadBox area='five' theme='dark' />
     </>
   );
-}
+};
 
 export const query = graphql`
   query {
@@ -132,3 +132,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Media;
