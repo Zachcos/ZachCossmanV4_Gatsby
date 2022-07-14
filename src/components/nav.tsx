@@ -93,7 +93,7 @@ const LinksWrapper = styled(motion.div)`
   }
 `;
 
-export default function Nav() {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -118,7 +118,7 @@ export default function Nav() {
       </NavWrapper>
     </LayoutGroup>
   );
-}
+};
 
 function Menu({ setIsOpen }: SetIsOpenProps) {
   return (
@@ -151,3 +151,5 @@ function Menu({ setIsOpen }: SetIsOpenProps) {
     </LinksWrapper>
   );
 }
+
+export default Nav;

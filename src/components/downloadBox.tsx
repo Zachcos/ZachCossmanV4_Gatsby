@@ -63,7 +63,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function DownloadBox({ area, theme }: DownloadBoxProps) {
+const DownloadBox = ({ area, theme }: DownloadBoxProps) => {
   let style = {};
 
   switch (theme) {
@@ -105,4 +105,6 @@ export default function DownloadBox({ area, theme }: DownloadBoxProps) {
       </a>
     </Wrapper>
   );
-}
+};
+
+export default DownloadBox;

@@ -6,7 +6,7 @@ import GridWrapper from './gridWrapper';
 import IntroOverlay from './introOverlay';
 import Nav from './nav';
 
-export default function Layout({ children }: ChildElementProp) {
+const Layout = ({ children }: ChildElementProp) => {
   useEffect(() => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -68,4 +68,6 @@ export default function Layout({ children }: ChildElementProp) {
       </GridWrapper>
     </>
   );
-}
+};
+
+export default Layout;

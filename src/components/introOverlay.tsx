@@ -94,19 +94,21 @@ const Overlay = styled.div`
   }
 `;
 
-export default function IntroOverlay() {
+const IntroOverlay = () => {
   return (
-    <Overlay id="intro-overlay">
-      <div className="top">
-        <div className="overlay-top" />
-        <div className="overlay-top" />
-        <div className="overlay-top" />
+    <Overlay id='intro-overlay'>
+      <div className='top'>
+        <div className='overlay-top' />
+        <div className='overlay-top' />
+        <div className='overlay-top' />
       </div>
-      <div className="bottom">
-        <div className="overlay-bottom" />
-        <div className="overlay-bottom" />
-        <div className="overlay-bottom" />
+      <div className='bottom'>
+        <div className='overlay-bottom' />
+        <div className='overlay-bottom' />
+        <div className='overlay-bottom' />
       </div>
     </Overlay>
   );
-}
+};
+
+export default IntroOverlay;

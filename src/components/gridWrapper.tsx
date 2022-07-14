@@ -55,6 +55,8 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function GridWrapper({ children }: ChildElementProp) {
+const GridWrapper = ({ children }: ChildElementProp) => {
   return <Wrapper>{children}</Wrapper>;
-}
+};
+
+export default GridWrapper;

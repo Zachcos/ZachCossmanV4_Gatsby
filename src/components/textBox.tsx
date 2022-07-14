@@ -77,12 +77,7 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function TextBox({
-  content,
-  area,
-  theme,
-  children,
-}: TextBoxProps) {
+const TextBox = ({ content, area, theme, children }: TextBoxProps) => {
   const { heading, subheading, subnote }: TextBoxContentProps = content;
   let style = {};
 
@@ -121,4 +116,6 @@ export default function TextBox({
       {children}
     </Wrapper>
   );
-}
+};
+
+export default TextBox;
