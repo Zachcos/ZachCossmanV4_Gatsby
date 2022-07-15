@@ -77,8 +77,21 @@ const Wrapper = styled.div`
   }
 `;
 
-const TextBox = ({ content, area, theme, children }: TextBoxProps) => {
-  const { heading, subheading, subnote }: TextBoxContentProps = content;
+interface Props {
+  content: ContentProps;
+  area: string;
+  theme: string;
+  children: JSX.Element;
+}
+
+interface ContentProps {
+  heading: string;
+  subheading: string;
+  subnote: string;
+}
+
+const TextBox = ({ content, area, theme, children }: Props) => {
+  const { heading, subheading, subnote }: ContentProps = content;
   let style = {};
 
   switch (theme) {

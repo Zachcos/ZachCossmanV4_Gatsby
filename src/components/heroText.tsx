@@ -25,7 +25,12 @@ const NameBox = styled.div`
   }
 `;
 
-const HeroText = ({ area, text }: HeroTextProps) => {
+interface Props {
+  area: string;
+  text: string;
+}
+
+const HeroText = ({ area, text }: Props) => {
   return (
     <NameBox style={{ gridArea: area }}>
       <div className='container'>

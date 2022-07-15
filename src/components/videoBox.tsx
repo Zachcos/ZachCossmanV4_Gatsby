@@ -42,7 +42,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const VideoBox = ({ video, area }: VideoBoxProps) => {
+interface Props {
+  video: string;
+  area: string;
+}
+
+const VideoBox = ({ video, area }: Props) => {
   return (
     <Wrapper style={{ gridArea: area }}>
       <LightGallery plugins={[lgVideo]}>

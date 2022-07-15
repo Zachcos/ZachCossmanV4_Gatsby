@@ -63,7 +63,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const DownloadBox = ({ area, theme }: DownloadBoxProps) => {
+interface Props {
+  area: string;
+  theme: string;
+}
+
+const DownloadBox = ({ area, theme }: Props) => {
   let style = {};
 
   switch (theme) {

@@ -51,7 +51,56 @@ const Wrapper = styled.div`
   }
 `;
 
-const Media = ({ data }: MediaProps) => {
+interface Props {
+  data: {
+    images: {
+      edges: {
+        node: {
+          id: string;
+          original: {
+            src: string;
+          };
+          gatsbyImageData: Object;
+        };
+        filter: Function;
+      };
+    };
+    videos: {
+      edges: {
+        node: {
+          id: string;
+          title: string;
+          artist: string;
+          findMe: string;
+          videoUrl: string;
+        };
+        map: Function;
+      };
+    };
+  };
+}
+
+interface ImageProps {
+  node: {
+    id: string;
+    original: {
+      src: string;
+    };
+    gatsbyImageData: any;
+  };
+}
+
+interface VideoProps {
+  node: {
+    id: string;
+    title: string;
+    artist: string;
+    findMe: string;
+    videoUrl: string;
+  };
+}
+
+const Media = ({ data }: Props) => {
   const allImages = data.images.edges;
   const allVideos = data.videos.edges;
   return (
@@ -60,10 +109,10 @@ const Media = ({ data }: MediaProps) => {
         <h2 className='gallery-header'>Headshots</h2>
         <LightGallery elementClassNames='gallery gallery--photo'>
           {allImages
-            .filter((item: ImageItemData) =>
+            .filter((item: ImageProps) =>
               item.node.original.src.includes('headshot')
             )
-            .map((img: ImageItemData) => (
+            .map((img: ImageProps) => (
               <a
                 data-src={img.node.original.src}
                 key={img.node.id}
@@ -79,13 +128,13 @@ const Media = ({ data }: MediaProps) => {
           plugins={[lgVideo]}
           autoplayVideoOnSlide
         >
-          {allVideos.map((item: VideoItemData) => {
+          {allVideos.map((item: VideoProps) => {
             const current = item.node.findMe;
             return allImages
-              .filter((item2: ImageItemData) =>
+              .filter((item2: ImageProps) =>
                 item2.node.original.src.includes(current)
               )
-              .map((item2: ImageItemData) => (
+              .map((item2: ImageProps) => (
                 <a
                   data-src={item.node.videoUrl}
                   key={item.node.id}

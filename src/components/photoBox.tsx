@@ -23,7 +23,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const PhotoBox = ({ image, area }: PhotoBoxProps) => {
+interface Props {
+  image: string;
+  area: string;
+}
+
+const PhotoBox = ({ image, area }: Props) => {
   return (
     <Wrapper style={{ gridArea: area }}>
       <img src={image} alt='' />

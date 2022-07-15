@@ -120,7 +120,11 @@ const Nav = () => {
   );
 };
 
-function Menu({ setIsOpen }: SetIsOpenProps) {
+interface Props {
+  setIsOpen: Function;
+}
+
+function Menu({ setIsOpen }: Props) {
   return (
     <LinksWrapper
       layout
