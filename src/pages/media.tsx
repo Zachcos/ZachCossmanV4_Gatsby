@@ -55,25 +55,13 @@ interface Props {
   data: {
     images: {
       edges: {
-        node: {
-          id: string;
-          original: {
-            src: string;
-          };
-          gatsbyImageData: Object;
-        };
+        node: ImageProps[];
         filter: Function;
       };
     };
     videos: {
       edges: {
-        node: {
-          id: string;
-          title: string;
-          artist: string;
-          findMe: string;
-          videoUrl: string;
-        };
+        node: VideoProps[];
         map: Function;
       };
     };
