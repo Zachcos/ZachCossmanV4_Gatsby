@@ -121,7 +121,7 @@ const Nav = () => {
 };
 
 interface Props {
-  setIsOpen: Function;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function Menu({ setIsOpen }: Props) {
