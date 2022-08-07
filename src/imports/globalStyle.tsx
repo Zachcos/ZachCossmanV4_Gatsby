@@ -62,24 +62,21 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'DIN';
     font-weight: 400;
-    src: url('/fonts/DIN-Regular.eot'),
-         url('/fonts/DIN-Regular.woff2') format('woff2'),
+    src: url('/fonts/DIN-Regular.woff2') format('woff2'),
          url('/fonts/DIN-Regular.woff') format('woff'),
          url('/fonts/DIN-Regular.ttf') format('truetype');
   }
   @font-face {
     font-family: 'DIN';
     font-weight: 600;
-    src: url('/fonts/DIN-Medium.eot'),
-         url('/fonts/DIN-Medium.woff2') format('woff2'),
+    src: url('/fonts/DIN-Medium.woff2') format('woff2'),
          url('/fonts/DIN-Medium.woff') format('woff'),
          url('/fonts/DIN-Medium.ttf') format('truetype');
   }
   @font-face {
     font-family: 'DIN';
     font-weight: 800;
-    src: url('/fonts/DIN-Bold.eot'),
-         url('/fonts/DIN-Bold.woff2') format('woff2'),
+    src: url('/fonts/DIN-Bold.woff2') format('woff2'),
          url('/fonts/DIN-Bold.woff') format('woff'),
          url('/fonts/DIN-Bold.ttf') format('truetype');
   }
