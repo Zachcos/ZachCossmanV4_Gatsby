@@ -13,13 +13,13 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Footloose',
-    subheading: 'Norwegian Cruise Lines',
-    subnote: 'Mon, May 23th',
+    heading: 'Stay Tuned',
+    subheading: 'Info coming soon',
+    subnote: 'Fri, Dec 2nd',
   };
 
   const blurb =
-    'Zach is currently playing Ren McCormack in Footloose on the Norwegian Joy.';
+    'Zach just returned to NYC after back-to-back contracts with Norwegian Cruise Lines, playing Charlie Price in Kinky Boots and Ren McCormack in Footloose.';
 
   return (
     <>
