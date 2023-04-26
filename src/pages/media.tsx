@@ -110,8 +110,9 @@ const Media = ({ data }: Props) => {
               </a>
             ))}
         </LightGallery>
-        <h2 className='gallery-header'>Covers</h2>
-        <LightGallery
+        <h2 className='gallery-header'>Videos</h2>
+        Videos coming soon
+        {/* <LightGallery
           elementClassNames='gallery gallery--video'
           plugins={[lgVideo]}
           autoplayVideoOnSlide
@@ -135,7 +136,7 @@ const Media = ({ data }: Props) => {
                 </a>
               ));
           })}
-        </LightGallery>
+        </LightGallery> */}
       </Wrapper>
       <VideoBox video={video} area='four' />
       <DownloadBox area='five' theme='dark' />
