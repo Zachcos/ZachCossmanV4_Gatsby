@@ -13,13 +13,13 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Stay Tuned',
-    subheading: 'Info coming soon',
-    subnote: 'Fri, Dec 2nd',
+    heading: 'Sam Phillips in MDQ',
+    subheading: 'Berkshire Theatre Group',
+    subnote: 'Wed, Jun 14th',
   };
 
   const blurb =
-    'Zach just returned to NYC after back-to-back contracts with Norwegian Cruise Lines, playing Charlie Price in Kinky Boots and Ren McCormack in Footloose.';
+    'Zach is currently playing Sam Phillips in Million Dollar Quartet at The Colonial Theatre in Pittsfield, MA, produced by Berkshire Theatre Group, running through July 16th.';
 
   return (
     <>
@@ -30,6 +30,15 @@ const Home = () => {
           <br />
           {blurb}
           <br />
+          <br />
+          <a
+            href='https://www.berkshiretheatregroup.org/event/million-dollar-quartet/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Click Here
+          </a>{' '}
+          for more information
         </p>
       </TextBox>
       <VideoBox video={video} area='four' />
