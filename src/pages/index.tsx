@@ -13,13 +13,13 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Sam Phillips in MDQ',
-    subheading: 'Berkshire Theatre Group',
-    subnote: 'Wed, Jun 14th',
+    heading: 'Back in NYC',
+    subheading: 'More info coming soon',
+    subnote: 'Mon, Jul 17th',
   };
 
   const blurb =
-    'Zach is currently playing Sam Phillips in Million Dollar Quartet at The Colonial Theatre in Pittsfield, MA, produced by Berkshire Theatre Group, running through July 16th.';
+    'Zach is back in NYC after completing a run playing Sam Phillips in Million Dollar Quartet at The Colonial Theatre in Pittsfield, MA, produced by Berkshire Theatre Group.';
 
   return (
     <>
@@ -29,16 +29,6 @@ const Home = () => {
         <p className='body'>
           <br />
           {blurb}
-          <br />
-          <br />
-          <a
-            href='https://www.berkshiretheatregroup.org/event/million-dollar-quartet/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Click Here
-          </a>{' '}
-          for more information
         </p>
       </TextBox>
       <VideoBox video={video} area='four' />
