@@ -5,7 +5,7 @@ import TextBox from '../components/textBox';
 import DownloadBox from '../components/downloadBox';
 import PhotoBox from '../components/photoBox';
 
-import headshot from '../../static/assets/headshot3.jpg';
+import headshot from '../../static/assets/headshot4.jpg';
 import ASALogo from '../../static/assets/ASAlogo.png';
 import ZCDLogo from '../../static/assets/ZCDlogo.svg';
 

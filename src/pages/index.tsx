@@ -8,7 +8,7 @@ import VideoBox from '../components/videoBox';
 import DownloadBox from '../components/downloadBox';
 
 // Assets
-import headshot from '../../static/assets/headshot.jpg';
+import headshot from '../../static/assets/headshot3.jpg';
 import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
