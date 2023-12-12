@@ -13,13 +13,13 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Back in NYC',
-    subheading: 'More info coming soon',
-    subnote: 'Mon, Jul 17th',
+    heading: 'Jersey Boys Las Vegas',
+    subheading: '2024 Residency',
+    subnote: 'Wed, Nov 15th',
   };
 
   const blurb =
-    'Zach is back in NYC after completing a run playing Sam Phillips in Million Dollar Quartet at The Colonial Theatre in Pittsfield, MA, produced by Berkshire Theatre Group.';
+    'Zach is currently in rehearsals to play Handsome Hank/Norm Waxman in the debut cast of the 2024 Jersey Boys residency at The Orleans Hotel & Casino in Las Vegas, Nevada.';
 
   return (
     <>
