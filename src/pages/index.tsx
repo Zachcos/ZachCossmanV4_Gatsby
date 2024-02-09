@@ -15,11 +15,11 @@ const Home = () => {
   const gig = {
     heading: 'Jersey Boys Las Vegas',
     subheading: '2024 Residency',
-    subnote: 'Wed, Nov 15th',
+    subnote: 'Fri, Jan 26th',
   };
 
   const blurb =
-    'Zach is currently in rehearsals to play Handsome Hank/Norm Waxman in the debut cast of the 2024 Jersey Boys residency at The Orleans Hotel & Casino in Las Vegas, Nevada.';
+    'Zach is currently playing Norm Waxman/Hank Majewski in the debut cast of the 2024 Jersey Boys residency at The Orleans Hotel & Casino in Las Vegas, Nevada.';
 
   return (
     <>
