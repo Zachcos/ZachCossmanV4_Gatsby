@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${color.dark};
     font-family: "DIN", sans-serif;
     font-weight: 400;
-    visibility: hidden;
+    /* visibility: hidden; */
   }
 
   @font-face {
