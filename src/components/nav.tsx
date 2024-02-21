@@ -29,6 +29,7 @@ const NavIcon = styled(motion.div)`
   position: absolute;
   top: 0;
   width: 70px;
+  z-index: 200;
   .line-wrapper {
     width: 35px;
     span {
@@ -130,8 +131,8 @@ function Menu({ setIsOpen }: Props) {
     <LinksWrapper
       layout
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.2 } }}
-      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.1 } }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
       <div className='link'>
         <Link to='/' onClick={() => setIsOpen(false)}>
