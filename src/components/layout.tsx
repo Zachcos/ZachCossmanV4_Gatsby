@@ -6,7 +6,6 @@ import GlobalStyle from '../imports/globalStyle';
 import GridWrapper from './gridWrapper';
 // import IntroOverlay from './introOverlay';
 import Nav from './nav';
-import IntroOverlay from './introOverlay';
 
 const Layout = ({ children }: ChildElementProp) => {
   // useEffect(() => {
