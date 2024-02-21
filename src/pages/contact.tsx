@@ -16,8 +16,8 @@ const Contact = () => {
     subnote: '',
   };
   const designDetails = {
-    heading: 'I made this site',
-    subheading: 'You can have one, too',
+    heading: 'Photography',
+    subheading: 'link coming soon',
     subnote: '',
   };
 
@@ -39,17 +39,7 @@ const Contact = () => {
       </TextBox>
       <DownloadBox area='three' theme='dark' />
       <TextBox area='four' content={designDetails} theme='accent'>
-        <a
-          href='https://zachcossmandesigns.com'
-          target='_blank'
-          rel='noreferrer'
-          style={{ color: `${color.dark}` }}
-        >
-          <div className='img-container'>
-            <img src={ZCDLogo} alt='' />
-            <span className='zcd emphasis'>Zach Cossman Designs</span>
-          </div>
-        </a>
+        <div />
       </TextBox>
       <PhotoBox image={headshot} area='five' />
     </>
