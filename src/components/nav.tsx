@@ -15,6 +15,7 @@ const NavWrapper = styled(motion.div)`
   min-height: 70px;
   position: fixed;
   top: 0;
+  z-index: 100;
 `;
 
 const NavIcon = styled(motion.div)`
