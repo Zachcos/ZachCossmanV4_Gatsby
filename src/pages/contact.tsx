@@ -7,7 +7,6 @@ import PhotoBox from '../components/photoBox';
 
 import headshot from '../../static/assets/headshot4.jpg';
 import ASALogo from '../../static/assets/ASAlogo.png';
-import ZCDLogo from '../../static/assets/ZCDlogo.svg';
 
 const Contact = () => {
   const agentDetails = {
