@@ -16,7 +16,7 @@ const Contact = () => {
   };
   const designDetails = {
     heading: 'Photography',
-    subheading: 'link coming soon',
+    subheading: 'portfolio',
     subnote: '',
   };
 
@@ -38,7 +38,16 @@ const Contact = () => {
       </TextBox>
       <DownloadBox area='three' theme='dark' />
       <TextBox area='four' content={designDetails} theme='accent'>
-        <div />
+        <a
+          href='https://zachcos.myportfolio.com'
+          target='_blank'
+          rel='noreferrer'
+          style={{ color: `${color.dark}` }}
+        >
+          <div className='img-container'>
+            <span className='asa emphasis'>Zachcos.myportfolio.com</span>
+          </div>
+        </a>
       </TextBox>
       <PhotoBox image={headshot} area='five' />
     </>
