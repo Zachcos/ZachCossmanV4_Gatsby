@@ -13,13 +13,32 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Jersey Boys Las Vegas',
-    subheading: '2024 Residency',
-    subnote: 'Fri, Jan 26th',
+    heading: 'Million Dollar Quartet',
+    subheading: 'North Shore Music Theatre',
+    subnote: 'Thu, Jul 11th',
   };
 
-  const blurb =
-    'Zach is currently playing Norm Waxman/Hank Majewski in the debut cast of the 2024 Jersey Boys residency at The Orleans Hotel & Casino in Las Vegas, Nevada.';
+  const blurb = [
+    <>
+      Zach will return to the role of{' '}
+      <span className='emphasis'>Sam Phillips</span> in North Shore's upcoming
+      production of <span className='emphasis'>Million Dollar Quartet</span>,
+      &nbsp; running <span className='emphasis'>Sept 25th - Oct 6th</span> in
+      Beverly, MA.
+    </>,
+    <br />,
+    <br />,
+    <>
+      <a
+        className='learnMore'
+        target='_blank'
+        href='https://www.nsmt.org/milliondollarquartet.html'
+      >
+        Click here
+      </a>{' '}
+      for info and tickets
+    </>,
+  ];
 
   return (
     <>
