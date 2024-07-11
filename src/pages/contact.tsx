@@ -39,13 +39,13 @@ const Contact = () => {
       <DownloadBox area='three' theme='dark' />
       <TextBox area='four' content={designDetails} theme='accent'>
         <a
-          href='https://zachcos.myportfolio.com'
+          href='https://zachcossmancreative.com/'
           target='_blank'
           rel='noreferrer'
           style={{ color: `${color.dark}` }}
         >
           <div className='img-container'>
-            <span className='asa emphasis'>Zachcos.myportfolio.com</span>
+            <span className='asa emphasis'>ZachCossmanCreative.com</span>
           </div>
         </a>
       </TextBox>
