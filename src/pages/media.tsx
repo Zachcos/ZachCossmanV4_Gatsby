@@ -111,32 +111,33 @@ const Media = ({ data }: Props) => {
             ))}
         </LightGallery>
         <h2 className='gallery-header'>Videos</h2>
-        Videos coming soon
-        {/* <LightGallery
-          elementClassNames='gallery gallery--video'
-          plugins={[lgVideo]}
-          autoplayVideoOnSlide
-        >
-          {allVideos.map((item: VideoProps) => {
-            const current = item.node.findMe;
-            return allImages
-              .filter((item2: ImageProps) =>
-                item2.node.original.src.includes(current)
-              )
-              .map((item2: ImageProps) => (
-                <a
-                  data-src={item.node.videoUrl}
-                  key={item.node.id}
-                  className='thumb'
-                >
-                  <GatsbyImage
-                    image={item2.node.gatsbyImageData}
-                    alt={item.node.title}
-                  />
-                </a>
-              ));
-          })}
-        </LightGallery> */}
+        {
+          <LightGallery
+            elementClassNames='gallery gallery--video'
+            plugins={[lgVideo]}
+            autoplayVideoOnSlide
+          >
+            {allVideos.map((item: VideoProps) => {
+              const current = item.node.findMe;
+              return allImages
+                .filter((item2: ImageProps) =>
+                  item2.node.original.src.includes(current)
+                )
+                .map((item2: ImageProps) => (
+                  <a
+                    data-src={item.node.videoUrl}
+                    key={item.node.id}
+                    className='thumb'
+                  >
+                    <GatsbyImage
+                      image={item2.node.gatsbyImageData}
+                      alt={item.node.title}
+                    />
+                  </a>
+                ));
+            })}
+          </LightGallery>
+        }
       </Wrapper>
       <VideoBox video={video} area='four' />
       <DownloadBox area='five' theme='dark' />
