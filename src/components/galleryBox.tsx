@@ -41,22 +41,13 @@ const Wrapper = styled.div`
 `;
 
 interface Props {
-  video: string;
   area: string;
 }
 
-const GalleryBox = ({ video, area }: Props) => {
+const GalleryBox = ({ area }: Props) => {
   return (
     <Wrapper style={{ gridArea: area }}>
-      <LightGallery>
-        <a
-          href='https://youtu.be/M7OKn9vBj9M'
-          aria-label='video clip'
-          data-src='https://youtu.be/M7OKn9vBj9M'
-        >
-          <video src={video} autoPlay loop muted playsInline />
-        </a>
-      </LightGallery>
+      <LightGallery>this is a test</LightGallery>
     </Wrapper>
   );
 };

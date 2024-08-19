@@ -6,7 +6,7 @@ import LightGallery from 'lightgallery/react';
 import lgVideo from 'lightgallery/plugins/video';
 import { color, device, font } from '../imports/variables';
 import DownloadBox from '../components/downloadBox';
-import VideoBox from '../components/videoBox';
+import GalleryBox from '../components/galleryBox';
 
 import video from '../../static/assets/ncl_thumbnail.mp4';
 
@@ -139,7 +139,7 @@ const Media = ({ data }: Props) => {
           </LightGallery>
         }
       </Wrapper>
-      <VideoBox video={video} area='four' />
+      <GalleryBox area='four' />
       <DownloadBox area='five' theme='dark' />
     </>
   );
