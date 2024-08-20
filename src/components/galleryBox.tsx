@@ -35,15 +35,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const Placeholder = styled.div`
-  background: darkred;
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  border: 1px solid black;
-  margin: 0 10px 20px 0;
-`;
-
 interface Props {
   images: {
     node: ImageProps[];
