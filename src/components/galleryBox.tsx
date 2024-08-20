@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color, font } from '../imports/variables';
+import { color, font, device } from '../imports/variables';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import LightGallery from 'lightgallery/react';
 
@@ -24,6 +24,14 @@ const Wrapper = styled.div`
       overflow: hidden;
       &:hover {
         cursor: pointer;
+      }
+      @media ${device.tablet} {
+        max-height: 100px;
+        max-width: 100px;
+      }
+      @media ${device.phone} {
+        max-height: 75px;
+        max-width: 75px;
       }
     }
   }
