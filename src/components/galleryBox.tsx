@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { color, font } from '../imports/variables';
-
-import LightGallery from 'lightgallery/react';
-import 'lightgallery/css/lightgallery.css';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import LightGallery from 'lightgallery/react';
+
+import 'lightgallery/css/lightgallery.css';
 
 const Wrapper = styled.div`
   background: ${color.accent};
@@ -57,22 +57,20 @@ const GalleryBox = ({ area, images }: Props) => {
   return (
     <Wrapper style={{ gridArea: area }}>
       <h2 className='heading'>Headshots</h2>
-      <LightGallery>
-        <div className='gallery'>
-          {images
-            .filter((item: ImageProps) =>
-              item.node.original.src.includes('headshot')
-            )
-            .map((img: ImageProps) => (
-              <a
-                data-src={img.node.original.src}
-                key={img.node.id}
-                className='thumb'
-              >
-                <GatsbyImage image={img.node.gatsbyImageData} alt='headshot' />
-              </a>
-            ))}
-        </div>
+      <LightGallery elementClassNames='gallery'>
+        {images
+          .filter((item: ImageProps) =>
+            item.node.original.src.includes('headshot')
+          )
+          .map((img: ImageProps) => (
+            <a
+              data-src={img.node.original.src}
+              key={img.node.id}
+              className='thumb'
+            >
+              <GatsbyImage image={img.node.gatsbyImageData} alt='headshot' />
+            </a>
+          ))}
       </LightGallery>
     </Wrapper>
   );
