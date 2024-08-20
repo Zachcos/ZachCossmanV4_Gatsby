@@ -5,39 +5,11 @@ import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 
 const Wrapper = styled.div`
-  align-items: center;
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
   overflow: hidden;
+  padding: 60px 25px 0;
   position: relative;
-  .lg-react-element {
-    width: 100%;
-    height: 100%;
-  }
-  &:hover {
-    svg {
-      opacity: 1;
-    }
-  }
-  a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-      cursor: pointer;
-      opacity: 0.3;
-      position: absolute;
-      transition: opacity 0.15s ease-out;
-    }
-  }
-  video {
-    height: 100%;
-    object-fit: cover;
-    object-position: right;
-    width: 100%;
-  }
 `;
 
 interface Props {
