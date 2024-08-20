@@ -8,8 +8,6 @@ import { color, device, font } from '../imports/variables';
 import DownloadBox from '../components/downloadBox';
 import GalleryBox from '../components/galleryBox';
 
-import video from '../../static/assets/ncl_thumbnail.mp4';
-
 import 'lightgallery/css/lg-video.css';
 import 'lightgallery/css/lightgallery.css';
 
