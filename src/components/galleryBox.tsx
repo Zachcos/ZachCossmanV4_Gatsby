@@ -17,6 +17,15 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    a.thumb {
+      margin: 0 10px 20px 0%;
+      max-height: 125px;
+      max-width: 125px;
+      overflow: hidden;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   .heading {
     font-size: ${font.heading};
