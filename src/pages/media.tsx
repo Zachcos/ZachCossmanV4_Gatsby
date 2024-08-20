@@ -92,7 +92,7 @@ const Media = ({ data }: Props) => {
   return (
     <>
       <Wrapper>
-        <h2 className='gallery-header'>Headshots</h2>
+        {/* <h2 className='gallery-header'>Headshots</h2>
         <LightGallery elementClassNames='gallery gallery--photo'>
           {allImages
             .filter((item: ImageProps) =>
@@ -107,7 +107,7 @@ const Media = ({ data }: Props) => {
                 <GatsbyImage image={img.node.gatsbyImageData} alt='headshot' />
               </a>
             ))}
-        </LightGallery>
+        </LightGallery> */}
         <h2 className='gallery-header'>Videos</h2>
         {
           <LightGallery
