@@ -30,6 +30,10 @@ const Wrapper = styled.div`
     font-weight: ${font.bold};
     margin-bottom: 20px;
     width: 100%;
+    span {
+      font-size: ${font.subsubheading};
+      color: ${color.med};
+    }
   }
   .gallery {
     display: flex;
@@ -108,7 +112,9 @@ const Media = ({ data }: Props) => {
               </a>
             ))}
         </LightGallery> */}
-        <h2 className='gallery-header'>Videos</h2>
+        <h2 className='gallery-header'>
+          Videos <span>(additional videos coming soon)</span>{' '}
+        </h2>
         {
           <LightGallery
             elementClassNames='gallery gallery--video'
