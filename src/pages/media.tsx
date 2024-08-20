@@ -137,7 +137,7 @@ const Media = ({ data }: Props) => {
           </LightGallery>
         }
       </Wrapper>
-      <GalleryBox area='four' />
+      <GalleryBox area='four' images={allImages} />
       <DownloadBox area='five' theme='dark' />
     </>
   );
