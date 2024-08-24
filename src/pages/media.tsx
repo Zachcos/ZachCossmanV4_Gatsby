@@ -42,9 +42,9 @@ const Wrapper = styled.div`
     margin-bottom: 50px;
     width: 100%;
     a.thumb {
-      margin: 10px 5px;
-      max-height: 125px;
-      max-width: 125px;
+      margin: 10px 5px 10px 0;
+      max-height: 200px;
+      max-width: 200px;
       overflow: hidden;
       &:hover {
         cursor: pointer;
