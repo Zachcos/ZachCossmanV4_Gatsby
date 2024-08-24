@@ -101,7 +101,7 @@ const Media = ({ data }: Props) => {
         </h2>
         {
           <LightGallery
-            elementClassNames='gallery gallery--video'
+            elementClassNames='gallery'
             plugins={[lgVideo]}
             autoplayVideoOnSlide
           >
