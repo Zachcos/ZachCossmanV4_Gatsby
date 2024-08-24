@@ -96,22 +96,6 @@ const Media = ({ data }: Props) => {
   return (
     <>
       <Wrapper>
-        {/* <h2 className='gallery-header'>Headshots</h2>
-        <LightGallery elementClassNames='gallery gallery--photo'>
-          {allImages
-            .filter((item: ImageProps) =>
-              item.node.original.src.includes('headshot')
-            )
-            .map((img: ImageProps) => (
-              <a
-                data-src={img.node.original.src}
-                key={img.node.id}
-                className='thumb'
-              >
-                <GatsbyImage image={img.node.gatsbyImageData} alt='headshot' />
-              </a>
-            ))}
-        </LightGallery> */}
         <h2 className='gallery-header'>
           Videos <span>(additional videos coming soon)</span>{' '}
         </h2>
