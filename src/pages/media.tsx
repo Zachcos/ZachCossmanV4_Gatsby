@@ -44,6 +44,9 @@ const Wrapper = styled.div`
     a.thumb {
       overflow: hidden;
       margin-bottom: 50px;
+      @media ${device.phone} {
+        max-width: 120px;
+      }
       &:hover {
         cursor: pointer;
       }
