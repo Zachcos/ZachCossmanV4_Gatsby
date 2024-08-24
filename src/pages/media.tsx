@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   h2.gallery-header {
     font-size: ${font.heading};
     font-weight: ${font.bold};
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
     span {
       font-size: ${font.subsubheading};
@@ -42,12 +42,23 @@ const Wrapper = styled.div`
     margin-bottom: 50px;
     width: 100%;
     a.thumb {
-      margin: 10px 5px 10px 0;
-      max-height: 200px;
-      max-width: 200px;
       overflow: hidden;
       &:hover {
         cursor: pointer;
+      }
+      .info {
+        padding-top: 8px;
+        h2 {
+          text-transform: uppercase;
+          font-weight: ${font.bold};
+          font-size: ${font.subheading};
+          margin-bottom: 5px;
+        }
+        h4 {
+          color: ${color.med};
+          font-weight: ${font.medium};
+          font-size: ${font.subsubheading};
+        }
       }
     }
   }
@@ -121,6 +132,10 @@ const Media = ({ data }: Props) => {
                       image={item2.node.gatsbyImageData}
                       alt={item.node.title}
                     />
+                    <div className='info'>
+                      <h2>{item.node.title}</h2>
+                      <h4>{item.node.artist}</h4>
+                    </div>
                   </a>
                 ));
             })}
