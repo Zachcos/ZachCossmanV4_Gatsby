@@ -43,6 +43,7 @@ const Wrapper = styled.div`
     width: 100%;
     a.thumb {
       overflow: hidden;
+      margin-bottom: 50px;
       &:hover {
         cursor: pointer;
       }
