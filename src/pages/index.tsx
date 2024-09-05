@@ -12,46 +12,19 @@ import headshot from '../../static/assets/headshot3.jpg';
 import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
-  // const gig = {
-  //   heading: 'Million Dollar Quartet',
-  //   subheading: 'North Shore Music Theatre',
-  //   subnote: 'Thu, Jul 11th',
-  // };
   const gig = {
-    heading: 'Jersey Boys',
-    subheading: 'Broadway at Music Circus',
-    subnote: 'Thur, Jul 18th',
+    heading: 'Million Dollar Quartet',
+    subheading: 'North Shore Music Theatre',
+    subnote: 'Mon, Sept 1st',
   };
-
-  // const blurb = [
-  //   <>
-  //     Zach will return to the role of{' '}
-  //     <span className='emphasis'>Sam Phillips</span> in North Shore's upcoming
-  //     production of <span className='emphasis'>Million Dollar Quartet</span>,
-  //     &nbsp; running <span className='emphasis'>Sept 25th - Oct 6th</span> in
-  //     Beverly, MA.
-  //   </>,
-  //   <br />,
-  //   <br />,
-  //   <>
-  //     <a
-  //       className='learnMore'
-  //       target='_blank'
-  //       href='https://www.nsmt.org/milliondollarquartet.html'
-  //     >
-  //       Click here
-  //     </a>{' '}
-  //     for info and tickets
-  //   </>,
-  // ];
 
   const blurb = [
     <>
       Zach will return to the role of{' '}
-      <span className='emphasis'>Norm Waxman</span> in Broadway at Music Circus'
-      upcoming production of <span className='emphasis'>Jersey Boys</span>,
-      running <span className='emphasis'>Aug 20th - Sep 1st</span> in
-      Sacramento, CA.
+      <span className='emphasis'>Sam Phillips</span> in North Shore's upcoming
+      production of <span className='emphasis'>Million Dollar Quartet</span>,
+      &nbsp; running <span className='emphasis'>Sept 25th - Oct 6th</span> in
+      Beverly, MA.
     </>,
     <br />,
     <br />,
@@ -59,7 +32,7 @@ const Home = () => {
       <a
         className='learnMore'
         target='_blank'
-        href='https://www.broadwaysacramento.com/production/jersey-boys-3/'
+        href='https://www.nsmt.org/milliondollarquartet.html'
       >
         Click here
       </a>{' '}
