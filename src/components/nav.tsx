@@ -139,11 +139,11 @@ function Menu({ setIsOpen }: Props) {
           home
         </Link>
       </div>
-      <div className='link'>
+      {/* <div className='link'>
         <Link to='/about' onClick={() => setIsOpen(false)}>
           about
         </Link>
-      </div>
+      </div> */}
       <div className='link'>
         <Link to='/media' onClick={() => setIsOpen(false)}>
           media
