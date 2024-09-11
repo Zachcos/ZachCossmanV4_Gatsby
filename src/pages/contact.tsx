@@ -16,7 +16,7 @@ const Contact = () => {
   };
   const designDetails = {
     heading: 'Photography',
-    subheading: 'portfolio',
+    subheading: 'Just for fun',
     subnote: '',
   };
 
