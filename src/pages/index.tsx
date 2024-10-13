@@ -13,30 +13,16 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Million Dollar Quartet',
-    subheading: 'North Shore Music Theatre',
-    subnote: 'Mon, Sept 1st',
+    heading: 'More info coming soon',
+    subheading: '',
+    subnote: 'Mon, Oct 7th',
   };
 
   const blurb = [
     <>
-      Zach will return to the role of{' '}
-      <span className='emphasis'>Sam Phillips</span> in North Shore's upcoming
-      production of <span className='emphasis'>Million Dollar Quartet</span>,
-      &nbsp; running <span className='emphasis'>Sept 25th - Oct 6th</span> in
-      Beverly, MA.
-    </>,
-    <br />,
-    <br />,
-    <>
-      <a
-        className='learnMore'
-        target='_blank'
-        href='https://www.nsmt.org/milliondollarquartet.html'
-      >
-        Click here
-      </a>{' '}
-      for info and tickets
+      After a year away completing contracts at The Orleans Casino in Las Vegas,
+      Broadway at Music Circus, and North Shore Music Theatre, Zach is back in
+      NYC.
     </>,
   ];
 
