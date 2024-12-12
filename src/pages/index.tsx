@@ -13,16 +13,24 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'More info coming soon',
-    subheading: '',
-    subnote: 'Mon, Oct 7th',
+    heading: 'Dr. Pomatter in Waitress',
+    subheading: 'Florida Studio Theatre',
+    subnote: 'Wed, Dec 18th',
   };
 
   const blurb = [
     <>
-      After a year away completing contracts at The Orleans Casino in Las Vegas,
-      Broadway at Music Circus, and North Shore Music Theatre, Zach is back in
-      NYC.
+      Zach is currently in rehearsals to play Dr. Pomatter in Waitress at
+      Florida Studio Theatre.
+      {/* <br />
+      <br />
+      <a
+        target='_blank'
+        href='https://www.floridastudiotheatre.org/events-and-tickets/winter-mainstage-series-2024-25/waitress'
+      >
+        Click here
+      </a>{' '}
+      to learn more about the show. */}
     </>,
   ];
 
