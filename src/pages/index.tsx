@@ -15,14 +15,14 @@ const Home = () => {
   const gig = {
     heading: 'Dr. Pomatter in Waitress',
     subheading: 'Florida Studio Theatre',
-    subnote: 'Wed, Dec 18th',
+    subnote: 'Thurs, Jan 2nd',
   };
 
   const blurb = [
     <>
-      Zach is currently in rehearsals to play Dr. Pomatter in Waitress at
-      Florida Studio Theatre.
-      {/* <br />
+      Zach is currently playing Dr. Pomatter in Waitress at Florida Studio
+      Theatre.
+      <br />
       <br />
       <a
         target='_blank'
@@ -30,7 +30,7 @@ const Home = () => {
       >
         Click here
       </a>{' '}
-      to learn more about the show. */}
+      to learn more about the show.
     </>,
   ];
 
