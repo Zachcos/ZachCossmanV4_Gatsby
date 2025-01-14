@@ -13,24 +13,19 @@ import video from '../../static/assets/ncl_thumbnail.mp4';
 
 const Home = () => {
   const gig = {
-    heading: 'Dr. Pomatter in Waitress',
-    subheading: 'Florida Studio Theatre',
-    subnote: 'Thurs, Jan 2nd',
+    heading: 'More Info Soon',
+    subheading: '',
+    subnote: 'Mon, Jan 13th',
   };
 
   const blurb = [
     <>
-      Zach is currently playing Dr. Pomatter in Waitress at Florida Studio
-      Theatre.
+      After completing a run of <span className='emphasis'>Waitress</span> as{' '}
+      <span className='emphasis'>Dr. Pomatter</span> at Florida Studio Theatre,
+      Zach is back in NYC.
       <br />
       <br />
-      <a
-        target='_blank'
-        href='https://www.floridastudiotheatre.org/events-and-tickets/winter-mainstage-series-2024-25/waitress'
-      >
-        Click here
-      </a>{' '}
-      to learn more about the show.
+      Additional information about upcoming projects coming soon.
     </>,
   ];
 
